@@ -21,3 +21,33 @@
 * Como ler um link
 
 # Aula 3:
+-> HTML, CSS E JAVASVRIPT
+* HTML: Linguagem de marcação hypertexto (conteúdo)
+- texto, imagem, vídeo, tabelas...
+* CSS: Folhas de estilo em cascata (desing)
+- cores, sombra, tamanhos, posicionamentos...
+
+# AULA 4:
+-> Conteúdo em HTML
+
+ <h1>Exemplo de título</h1>
+ <img src ="foto.png" alt="Exemplo de foto">
+ <p>Exemplo de parágrafo</p>
+
+-> Estilo em CSS
+
+h1{
+    font-family:Arial;
+    font-size:20pt;
+    color:blue;
+}
+
+-> Estrutura básica de Documento HTML
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="VTF-8">
+        <meta name="viewport"
+        content="width=device-width
+        initial-scale=1.0">
