@@ -30,9 +30,9 @@
 # AULA 4:
 -> Conteúdo em HTML
 
- <h1>Exemplo de título</h1>
- <img src ="foto.png" alt="Exemplo de foto">
- <p>Exemplo de parágrafo</p>
+ /_h1>Exemplo de título _/h1>
+ /_img src ="foto.png" alt="Exemplo de foto">
+ /_p>Exemplo de parágrafo _/p>
 
 -> Estilo em CSS
 
@@ -44,16 +44,4 @@ h1{
 
 -> Estrutura básica de Documento HTML
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" 
-    content="width=device-width, 
-    initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Olá, Mundo!</h>
-</body>
-</html>
+!...
