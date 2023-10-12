@@ -7,7 +7,7 @@
 * www e http
 * Criação da linguagem HTML e criação do primeiro navegador
 
->> Funcionamento da Internet:
+> Funcionamento da Internet:
 * Digitos binários
 * Ondas quadradas
 * Código UTF-8
@@ -28,19 +28,23 @@
    - cores, sombra, tamanhos, posicionamentos...
 
 ## AULA 4:
->> Conteúdo em HTML
+> Conteúdo em HTML
 
- /_h1>Exemplo de título _/h1>
- /_img src ="foto.png" alt="Exemplo de foto">
- /_p>Exemplo de parágrafo _/p>
+'''bash
+ <_h1>Exemplo de título _/h1>
+ <_img src ="foto.png" alt="Exemplo de foto">
+ <_p>Exemplo de parágrafo _/p>
+'''
 
->> Estilo em CSS
+> Estilo em CSS
 
+'''bash
 h1{
     font-family:Arial;
     font-size:20pt;
     color:blue;
 }
+'''
 
 > Estrutura básica de Documento HTML
 
