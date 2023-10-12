@@ -7,47 +7,63 @@
 * www e http
 * Criação da linguagem HTML e criação do primeiro navegador
 
-> Funcionamento da Internet:
+→ Funcionamento da Internet:
+
 * Digitos binários
 * Ondas quadradas
 * Código UTF-8
 * bit - byte - KB - MB - GB - TB - PB - EB - ZB - YB.....
 
 ## AULA 2:
-* Funcionamento da internet
+→ Funcionamento da internet (pt2)
 * DNS, IP e SERVIDORES
 * Domínio e Hospedagem
 * Enderoço URL
 * Como ler um link
 
 ## AULA 3:
-> HTML, CSS E JAVASVRIPT
+→ HTML, CSS E JAVASVRIPT
+
 - **HTML: Linguagem de marcação hypertexto (conteúdo)**
    - texto, imagem, vídeo, tabelas...
 - **CSS: Folhas de estilo em cascata (desing)**
    - cores, sombra, tamanhos, posicionamentos...
 
 ## AULA 4:
-> Conteúdo em HTML
+Conteúdo em HTML
 
-'''
- <_h1>Exemplo de título _/h1>
- <_img src ="foto.png" alt="Exemplo de foto">
- <_p>Exemplo de parágrafo _/p>
-'''
+```html
+ <h1>Exemplo de título </h1>
+ <img src ="foto.png" alt="Exemplo de foto">
+ <p>Exemplo de parágrafo </p>
+```
 
-> Estilo em CSS
+Estilo em CSS
 
-'''
+
+```html
 h1{
     font-family:Arial;
     font-size:20pt;
     color:blue;
 }
-'''
+```
 
-> Estrutura básica de Documento HTML
+Estrutura básica de Documento HTML
 
-'''
-!...
-'''
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro exercício</title>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Este é o meu primeiro documento em HTML! Estou muito feliz!
+    </p>
+    <p>Este momento é único! Estou criando um site de verdade!</p>
+</body>
+</html>
+```
