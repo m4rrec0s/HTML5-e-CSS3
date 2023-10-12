@@ -30,7 +30,7 @@
 ## AULA 4:
 > Conteúdo em HTML
 
-'''html
+'''
  <_h1>Exemplo de título _/h1>
  <_img src ="foto.png" alt="Exemplo de foto">
  <_p>Exemplo de parágrafo _/p>
@@ -38,7 +38,7 @@
 
 > Estilo em CSS
 
-'''html
+'''
 h1{
     font-family:Arial;
     font-size:20pt;
@@ -48,6 +48,6 @@ h1{
 
 > Estrutura básica de Documento HTML
 
-'''html
+'''
 !...
 '''
