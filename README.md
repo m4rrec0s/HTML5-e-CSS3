@@ -41,7 +41,7 @@ Conteúdo em HTML
 Estilo em CSS
 
 
-```html
+```css
 h1{
     font-family:Arial;
     font-size:20pt;
