@@ -22,18 +22,18 @@
 
 # AULA 3:
 > HTML, CSS E JAVASVRIPT
-* HTML: Linguagem de marcação hypertexto (conteúdo)
-*- texto, imagem, vídeo, tabelas...
-* CSS: Folhas de estilo em cascata (desing)
-*- cores, sombra, tamanhos, posicionamentos...
+- ** HTML: Linguagem de marcação hypertexto (conteúdo)
+   - texto, imagem, vídeo, tabelas...
+- ** CSS: Folhas de estilo em cascata (desing)
+   - cores, sombra, tamanhos, posicionamentos...
 
 # AULA 4:
 > Conteúdo em HTML
 
- /_h1>Exemplo de título _/h1>
+| /_h1>Exemplo de título _/h1>
  /_img src ="foto.png" alt="Exemplo de foto">
  /_p>Exemplo de parágrafo _/p>
-
+|
 > Estilo em CSS
 
 h1{
