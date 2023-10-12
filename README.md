@@ -7,7 +7,7 @@
 * www e http
 * Criação da linguagem HTML e criação do primeiro navegador
 
--> Funcionamento da Internet:
+> Funcionamento da Internet:
 * Digitos binários
 * Ondas quadradas
 * Código UTF-8
@@ -20,21 +20,21 @@
 * Enderoço URL
 * Como ler um link
 
-# Aula 3:
--> HTML, CSS E JAVASVRIPT
+# AULA 3:
+> HTML, CSS E JAVASVRIPT
 * HTML: Linguagem de marcação hypertexto (conteúdo)
-- texto, imagem, vídeo, tabelas...
+*- texto, imagem, vídeo, tabelas...
 * CSS: Folhas de estilo em cascata (desing)
-- cores, sombra, tamanhos, posicionamentos...
+*- cores, sombra, tamanhos, posicionamentos...
 
 # AULA 4:
--> Conteúdo em HTML
+> Conteúdo em HTML
 
  /_h1>Exemplo de título _/h1>
  /_img src ="foto.png" alt="Exemplo de foto">
  /_p>Exemplo de parágrafo _/p>
 
--> Estilo em CSS
+> Estilo em CSS
 
 h1{
     font-family:Arial;
@@ -42,6 +42,6 @@ h1{
     color:blue;
 }
 
--> Estrutura básica de Documento HTML
+> Estrutura básica de Documento HTML
 
 !...
