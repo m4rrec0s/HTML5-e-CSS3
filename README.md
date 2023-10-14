@@ -75,6 +75,7 @@ O **front-end** e o **back-end** são duas camadas principais de um software.
 
 * Já o **back-end** é a camada principal do software. Ele é o responsável em processar os dados e executar as ações que o software se propõe a fazer. O back-end é responsável por gerenciar o banco de dados, autenticação, segurança, lógica de negócios, etc.
 
-O front-end não é design, mas sim a parte visual e interativa de um software, seja ele um site ou um aplicativo. O front-end é responsável por gerenciar a usabilidade, o design e a experiência do usuário. 
+O front-end não é design, mas sim a parte visual e interativa de um software, seja ele um site ou um aplicativo. O front-end é responsável por gerenciar a usabilidade, o design e a experiência do usuário.
 
-![mapa mundi] (https://github.com/m4rrec0s/HTML5-e-CSS3/blob/main/Imagens/mapa-mundi.png)
+## Semântica
+O **HTML** está focado mais na semântica (sentido) do que na forma (aparência). Para mudar o estilo em geral do site utiliza-se o **CSS**.
