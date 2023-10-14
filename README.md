@@ -77,3 +77,4 @@ O **front-end** e o **back-end** são duas camadas principais de um software.
 
 O front-end não é design, mas sim a parte visual e interativa de um software, seja ele um site ou um aplicativo. O front-end é responsável por gerenciar a usabilidade, o design e a experiência do usuário. 
 
+<img scr="/Execícios/ex004/favicon.ico" alt="Favicon">
