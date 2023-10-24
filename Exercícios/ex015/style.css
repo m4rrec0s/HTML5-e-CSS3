@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body {
+    background-image: linear-gradient(to right, #d3eee0, #16a55b);
+}
+
+h1 {
+    color: #118248;
+}
+
+h1#principal {
+    background-color: #118248;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+h2 {
+    color: #0C5931;
+}
+
+.basico {
+    color: #469243;
+}
+
+.intermediario {
+    color: #928d43;
+}
+
+.avacado {
+    color: #924343;
+}
