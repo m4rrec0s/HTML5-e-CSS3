@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(194, 194, 194);
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: orange;
+        }
+
+        a::after {
+            content: ' [link]';
+            color: grey;
+            font-weight: normal;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://github.com/m4rrec0s" target="_blank">Perfil no Github</a></li>
+        <li><a href="https://www.youtube.com/channel/UCRLnFu3Fo7Z8ORL3DfuOfDw" target="_blank">Canal no Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com/curso/curso-html5-e-css3-modulo-2-de-5-40-horas/aulas/modulo-2-2/modulos/capitulo-15-aula-04-pseudo-elementos-em-css/" target="_blank">Site dos cursos</a></li>
+    </ul>
+</body>
+</html>
