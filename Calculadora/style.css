@@ -1,0 +1,41 @@
+body {
+    display: block;
+    font: bold, 18pt, Arial, sans-serif;
+    background-image: linear-gradient(to right, rgb(213, 236, 255), rgb(70, 70, 252));
+}
+
+#bloco {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 40px;
+    justify-content: center;
+    background-color: rgb(255, 240, 240);
+    margin: auto;
+    text-align: center;
+    width: 359px;
+    height: 600px;
+    border-radius: 15px;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.274);
+    border: 1px solid rgba(0, 2, 90, 0.418);
+}
+
+.tela {
+    background-color: rgb(194, 194, 194);
+    width: 359px;
+    height: 100px;
+}
+
+.botao {
+    font-size: 25pt;
+    display: flex;
+    width: 85px;
+    height: 55px;
+    margin: 1px;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
