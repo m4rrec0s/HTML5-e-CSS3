@@ -1,41 +1,95 @@
-body {
-    display: block;
-    font: bold, 18pt, Arial, sans-serif;
-    background-image: linear-gradient(to right, rgb(213, 236, 255), rgb(70, 70, 252));
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
 }
 
-#bloco {
+body {
     display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    top: 40px;
+    align-items: center;
     justify-content: center;
-    background-color: rgb(255, 240, 240);
-    margin: auto;
-    text-align: center;
+    background-image: linear-gradient(to right, rgb(213, 236, 255), rgb(70, 70, 252));
+    padding: 3em;
+}
+
+img#DEL {
+    margin-top: 5px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    width: 18px;
+    height: 18px;
+}
+
+#calc {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    background-color: #1f1f1fa1;
+    padding: 0.5em;
     width: 359px;
     height: 600px;
-    border-radius: 15px;
-    align-items: center;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.274);
-    border: 1px solid rgba(0, 2, 90, 0.418);
+
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.274);
+    border: 2px groove rgba(26, 26, 26, 0.123);
 }
 
-.tela {
-    background-color: rgb(194, 194, 194);
-    width: 359px;
-    height: 100px;
+#calc h3 {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
 }
 
-.botao {
-    font-size: 25pt;
-    display: flex;
-    width: 85px;
-    height: 55px;
-    margin: 1px;
-    background-color: rgb(19, 19, 19);
+#oper {
+    margin-top: 60px;
+    text-align: right;
+}
+
+#pre {
+    color: #929292;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+}
+
+#cur {
+    min-height: 1.6em;
+    font-size: 3em;
+    font-weight: 700;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+}
+
+#buttons {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+#buttons button {
     color: white;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 4em;
+    font-size: 1,2em;
+    background-color: rgba(8, 8, 8, 0.37);
+}
+
+#buttons .number {
+    background-color: #060606;
+}
+
+#buttons button:hover {
+    background-color: #ffffff49;
+    border-color: rgba(255, 255, 255, 0.486);
+}
+
+#buttons #equal-bnt {
+    background-color: #643770;
+}
+
+#buttons #equal-bnt:hover {
+    background-color: #a956c0;
 }
