@@ -28,7 +28,7 @@ img#DEL {
     background-color: #1f1f1fa1;
     padding: 0.5em;
     width: 359px;
-    height: 600px;
+    height: 550px;
 
     border-radius: 10px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.274);
@@ -46,14 +46,14 @@ img#DEL {
     text-align: right;
 }
 
-#pre {
+#cima {
     color: #929292;
     padding: 0.2em;
     overflow-wrap: break-word;
     min-height: 1.6em;
 }
 
-#cur {
+#baixo {
     min-height: 1.6em;
     font-size: 3em;
     font-weight: 700;
@@ -86,10 +86,10 @@ img#DEL {
     border-color: rgba(255, 255, 255, 0.486);
 }
 
-#buttons #equal-bnt {
+#buttons #igual {
     background-color: #643770;
 }
 
-#buttons #equal-bnt:hover {
+#buttons #igual:hover {
     background-color: #a956c0;
 }

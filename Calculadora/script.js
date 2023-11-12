@@ -1,5 +1,5 @@
-const preTxt = document.getElementById("pre");
-const curTxt = document.getElementById("cur");
+const preTxt = document.getElementById("cima");
+const curTxt = document.getElementById("baixo");
 const buttons = document.querySelectorAll("#buttons button");
 const del = document.getElementById("DEL");
 
@@ -11,12 +11,23 @@ class Calcular {
         this.operacaoPendente = null; // Nova propriedade para armazenar a operação pendente
     }
 
+    /*
     addnum(num) {
         // Só deixa 1 vírgula
         if (num === "," && this.curTxt.innerText.includes(",")) {
             return;
         }
         this.cur += num;
+        this.updateScreen();
+    }
+    */
+    
+    soumzero(num) {
+        //não pode tem vários zeros
+        if (num != "," && this.curTxt,innerText.includes("0")) {
+            return
+        }
+        this.cur += num
         this.updateScreen();
     }
 
@@ -95,7 +106,6 @@ del.addEventListener("click", () => {
     calc.updateScreen();
 });
 
-
 const calc = new Calcular(preTxt, curTxt);
 
 buttons.forEach((btn) => {
@@ -106,7 +116,7 @@ buttons.forEach((btn) => {
             calc.addnum(value);
         } else if (value === "C" || value === "CE") {
             // Limpar a tela
-            calc.curTxt.innerText = "";
+            calc.curTxt.innerText = "0";
             calc.preTxt.innerText = "";
             calc.cur = "";
             calc.operacaoPendente = null;
