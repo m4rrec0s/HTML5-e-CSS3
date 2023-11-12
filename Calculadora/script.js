@@ -11,7 +11,7 @@ class Calcular {
         this.operacaoPendente = null; // Nova propriedade para armazenar a operação pendente
     }
 
-    /*
+    
     addnum(num) {
         // Só deixa 1 vírgula
         if (num === "," && this.curTxt.innerText.includes(",")) {
@@ -20,16 +20,34 @@ class Calcular {
         this.cur += num;
         this.updateScreen();
     }
-    */
+    
     
     soumzero(num) {
-        //não pode tem vários zeros
-        if (num != "," && this.curTxt,innerText.includes("0")) {
-            return
+        // Verifica se o número é diferente de zero
+        if (num !== "0") {
+          // Remove todos os zeros à esquerda
+          num = num.replace(/^0+/, "");
+          // Verifica se o número é igual a zero
+          if (num === "") {
+            // Se o número for igual a zero, adiciona um zero
+            this.cur = "0";
+          } else {
+            // Se o número for diferente de zero, atualiza a tela
+            this.cur = num;
+          }
+          this.updateScreen();
+        } else {
+          // Se o número for igual a zero, verifica se já existe um zero na tela
+          if (this.cur === "0") {
+            // Se já existir um zero na tela, não faz nada
+            return;
+          } else {
+            // Se não existir um zero na tela, adiciona um zero
+            this.cur += "0";
+            this.updateScreen();
+          }
         }
-        this.cur += num
-        this.updateScreen();
-    }
+      }
 
     Pross_Operacao(operacao) {
         // Se houver uma operação pendente, execute-a primeiro
@@ -101,7 +119,7 @@ del.addEventListener("click", () => {
     calc.cur = calc.cur.slice(0, -1);
     if (calc.cur === "") {
         // Se a string ficar vazia, atualize a tela com 0
-        calc.cur = "0";
+        calc.cur = "";
     }
     calc.updateScreen();
 });
