@@ -134,7 +134,7 @@ buttons.forEach((btn) => {
             calc.addnum(value);
         } else if (value === "C" || value === "CE") {
             // Limpar a tela
-            calc.curTxt.innerText = "0";
+            calc.curTxt.innerText = "";
             calc.preTxt.innerText = "";
             calc.cur = "";
             calc.operacaoPendente = null;
