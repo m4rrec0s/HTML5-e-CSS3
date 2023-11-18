@@ -6,17 +6,41 @@
     <title>Modelo de caixas</title>
     <style>
         h1 {
-            background-color: rgb(79, 79, 184);
+            background-color: rgb(139, 139, 238);
             height: 300px;
             width: 300px;
+            /*
             border-width: 10px;
             border-style: solid;
-            border-color: rgb(255, 119, 21);
+            border-color: rgb(12, 0, 56);
+            */
+            border: 10px solid rgb(12, 0, 56);
 
-            padding-top: 10px; /* cima */
-            padding-left: 10px; /* esquerda */
-            padding-bottom: 10px; /* baixo */
-            padding-right: 10px; /* direita */
+            /*
+            padding-top: 10px; cima 
+            padding-right: 10px;  direita 
+            padding-bottom: 10px;  baixo 
+            padding-left: 10px;  esquerda 
+            */
+
+            padding: 10px; /* 1 valor deixa todas do mesmo tamanho, 2 valores (n=cima baixo, m=direita esquerda) */
+
+            /*
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+           */
+
+            margin: 20px auto 40px auto;
+
+            /*
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;
+            */
+
+            outline: 5px dashed salmon;
         }
     </style>
 </head>
