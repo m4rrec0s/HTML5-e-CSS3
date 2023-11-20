@@ -15,6 +15,7 @@ header {
     background-image: linear-gradient(to top, #1A5C38, #3DDA84);
 }
 
+
 header h1 {
     margin-top: 0px;
     text-align: center;
@@ -50,15 +51,18 @@ main {
     background-color: white;
     color: black;
     width: 800px;
-    padding: 20px;
+    padding: 0;
     margin-top: 0;
     margin: auto;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.507);
+    border-radius: 0px 0px 10px 10px;
 }
 
 main h2 {
+    margin: 0px;
     font-family: android;
     color: #1A5C38;
+    padding: 20px;
 }
 
 main h2.fundo {
@@ -69,6 +73,8 @@ main p {
     text-align: justify;
     text-indent: 30px;
     font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 main img {
@@ -76,8 +82,49 @@ main img {
     margin: auto;
 }
 
+main div#video {
+    background-color: #1A5C38;
+    padding: 10px;
+}
+
 main iframe {
     display: flex;
     align-items: center;
     margin: auto;
+}
+
+main div#extra {
+    background-color: #1A5C38;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+div#extra h3 {
+    padding: 10px;
+    background-color: #3DDA84;
+    border-radius: 10px 10px 0px 0px;
+}
+
+div#extra p {
+    padding: 10px;
+}
+
+div#extra a {
+    color: white;
+}
+
+main p#fim {
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #1A5C38;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
