@@ -8,11 +8,12 @@ header {
     background-color: white;
     padding: 5px;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 header h1 {
     text-align: center;
+    margin: 15px;
 }
 
 header a {
@@ -23,18 +24,23 @@ header a {
     background-color: rgb(66, 66, 66);
     padding: 5px;
     border-radius: 5px;
+    box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.623);
 }
+
 
 header a:hover {
     text-decoration: dashed;
     color: rgb(255, 189, 189);
     background-color: rgb(102, 75, 75);
+    
 }
+
 
 main {
     background-color: white;
     padding: 5px;
     margin: 10px;
+    border-radius: 10px;
 }
 
 article {
