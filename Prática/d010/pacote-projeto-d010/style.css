@@ -1,0 +1,83 @@
+@font-face {
+    font-family: android;
+    src: url(fontes/idroid.otf) format(truetype);
+}
+
+body {
+    background-color: #84E1AD;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header {
+    margin: 0;
+    width: 100%;
+    background-image: linear-gradient(to top, #1A5C38, #3DDA84);
+}
+
+header h1 {
+    margin-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+header p {
+    text-align: center;
+}
+
+header nav {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+header a {
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+header a:hover {
+    background-color: #3DDA84;
+    animation-delay: 0.5s;
+}
+
+main {
+    background-color: white;
+    color: black;
+    width: 800px;
+    padding: 20px;
+    margin-top: 0;
+    margin: auto;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.507);
+}
+
+main h2 {
+    font-family: android;
+    color: #1A5C38;
+}
+
+main h2.fundo {
+    background-image: linear-gradient(to right, #3dda8498, #3dda8400 50%);
+}
+
+main p {
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 18px;
+}
+
+main img {
+    display: flex;
+    margin: auto;
+}
+
+main iframe {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
