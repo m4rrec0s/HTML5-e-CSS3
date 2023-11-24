@@ -27,6 +27,10 @@ body {
     color: white;
 }
 
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
 header {
     background-image: linear-gradient(to top, #1A5C38, #3DDA84);
 }
@@ -41,10 +45,15 @@ header h1 {
     font-size: 30px;
     padding-top: 25px;
     padding-bottom: 20px;
+    text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.541);
 }
 
 header p {
+    margin: auto;
     text-align: center;
+    max-width: 450px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 header nav {
@@ -59,6 +68,7 @@ header a {
     color: white;
     text-align: left;
     padding: 10px;
+    transition-duration: 0.7s;
 }
 
 header a:hover {
@@ -72,6 +82,7 @@ main {
     background-color: white;
 
     color: black;
+    line-height: 30px;
     margin: auto;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.507);
     border-radius: 0px 0px 10px 10px;
@@ -101,6 +112,13 @@ main p {
 main a {
     color:#1A5C38;
     font-weight: bold;
+    text-decoration: none;
+    background-color: #3dda8498;
+    padding: 0px 5px 0px 5px;
+}
+
+main a:hover {
+    text-decoration: underline;
 }
 
 main img {
@@ -108,7 +126,7 @@ main img {
 }
 
 main img#pequeno {
-    width: 50%;
+    max-width: 350px;
     display: block;
     margin: auto;
 }
@@ -149,6 +167,7 @@ div#extra {
     margin-right: 20px;
     background-color: #1A5C38;
     border-radius: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 div#extra h3 {
@@ -163,8 +182,10 @@ div#extra p{
     color: white;
 }
 div#extra ul {
-    margin-left: 30px;
+    list-style-position: inside;
+    list-style-type: '\2714\00A0\00A0';
     color: #fff;
+    margin-left: 20px;
 }
 
 div#extra strong {
@@ -198,7 +219,3 @@ footer a:hover {
     text-decoration: underline;
 }
 
-main {
-    width: 80%;
-    /* Outros estilos */
-}
