@@ -1,6 +1,24 @@
+@charset "UTF-8";
+
 @font-face {
     font-family: android;
     src: url(fontes/idroid.otf) format(truetype);
+}
+
+/* 
+
+variáveis que podemos usar em todo o site
+
+:root {
+    --cor1: #1A5C34;
+    --cor2: #fff;
+}
+
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
@@ -10,11 +28,12 @@ body {
 }
 
 header {
-    margin: 0;
-    width: 100%;
     background-image: linear-gradient(to top, #1A5C38, #3DDA84);
 }
 
+strong {
+    color: #1A5C38;
+}
 
 header h1 {
     margin-top: 0px;
@@ -48,11 +67,11 @@ header a:hover {
 }
 
 main {
+    min-width: 430px;
+    max-width: 1000px;
     background-color: white;
+
     color: black;
-    width: 800px;
-    padding: 0;
-    margin-top: 0;
     margin: auto;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.507);
     border-radius: 0px 0px 10px 10px;
@@ -75,39 +94,25 @@ main p {
     font-size: 18px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.imagem-container-irina {
-    width: 100%; /* Garante que a div ocupe a largura total do contêiner pai */
-    height: 350px; /* Ajuste a altura conforme necessário */
-
-    background-size: cover; /* Cobrir a div com a imagem */
-    background-position: center; /* Centralizar a imagem */
-    background-repeat: no-repeat; /* Evitar repetição da imagem */
-
-    /* Imagem padrão para telas maiores */
-    background-image: url('imagens/irina-blok.jpg');
+main a {
+    color:#1A5C38;
+    font-weight: bold;
 }
 
-main div.imagem-container-robo {
-    width: 90%; /* Garante que a div ocupe a largura total do contêiner pai */
-    height: 250px; /* Ajuste a altura conforme necessário */
+main img {
+    width: 100%;
+}
 
-    background-size: cover; /* Cobrir a div com a imagem */
-    background-position: center; /* Centralizar a imagem */
-    background-repeat: no-repeat; /* Evitar repetição da imagem */
+main img#pequeno {
+    width: 50%;
+    display: block;
     margin: auto;
-
-    /* Imagem padrão para telas maiores */
-    background-image: url('imagens/dan-droids.png');
 }
 
-main div#imagem-android{
-        display: flex;
-        align-items: center; /* Alinha verticalmente ao centro */
-        justify-content: center; /* Alinha horizontalmente */
-        height: 200px; /* Ajuste a altura conforme necessário */
-}
 
 main div#video {
     background-color: #1A5C38;
@@ -139,6 +144,7 @@ main div#video {
 }
 
 div#extra {
+    margin-top: 30px;
     margin-left: 20px;
     margin-right: 20px;
     background-color: #1A5C38;
@@ -151,9 +157,18 @@ div#extra h3 {
     border-radius: 10px 10px 0px 0px;
 }
 
-div#extra p, ul {
+div#extra p{
+    padding-top: 10px;
     padding-bottom: 10px;
     color: white;
+}
+div#extra ul {
+    margin-left: 30px;
+    color: #fff;
+}
+
+div#extra strong {
+    color: #fff;
 }
 
 div#extra a {
@@ -161,8 +176,7 @@ div#extra a {
 }
 
 main p#fim {
-
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 20px;
 }
 
@@ -174,57 +188,17 @@ footer {
     padding-bottom: 20px;
 }
 
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 main {
     width: 80%;
     /* Outros estilos */
-}
-
-/* Estilos para telas médias (por exemplo, 50%) */
-@media screen and (max-width: 1200px) {
-    main {
-        width: 80%;
-        /* Outros estilos para telas médias */
-    }
-}
-
-/* Estilos para telas menores (por exemplo, 30%) */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    main {
-        width: 80%;
-        /* Outros estilos para telas menores */
-    }
-
-    header h1 {
-        font-size: 24px; /* Reduzindo o tamanho da fonte para telas menores */
-    }
-
-    header a {
-        font-size: 12px; /* Reduzindo o tamanho da fonte para links em telas menores */
-    }
-
-    main div.imagem-container-robo {
-        width: 100%;
-        height: 600px;
-        background-image: url('imagens/dan-droids-pq.png');
-    }
-}
-
-@media screen and (max-width: 480px) {
-    main {
-        width: 100%;
-        margin: auto;
-        border-radius: 0;
-        box-shadow: none;
-    }
-    
-    .imagem-container {
-        /* Imagem para telas menores */
-        background-image: url('imagens/irina-blok-pq.jpg');
-    }
-
-    main div.imagem-container-robo {
-        width: 100%;
-        height: 600px;
-        background-image: url('imagens/dan-droids-pq.png');
-    }
 }
