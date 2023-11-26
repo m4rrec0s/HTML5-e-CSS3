@@ -4,7 +4,7 @@
 
 ### Sites para visitar:
 
-<a href="https://m4rrec0s.github.io/HTML5-e-CSS3/Prática/d010/pacote-projetod010/">Site Android</a> <br>
+<a href="https://m4rrec0s.github.io/HTML5-e-CSS3/Prática/d010/pacote-projeto-d010/#">Site Android</a> <br>
 <a href="https://m4rrec0s.github.io/HTML5-e-CSS3/Calculadora/calculadora.html">Calculadora <strong>(win11)</strong></a>
 
 ## AULA 1:
