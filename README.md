@@ -4,8 +4,8 @@
 
 ### Sites para visitar:
 
-<a href="C:\Users\marco\OneDrive\Documentos\GitHub\HTTP5-e-CSS3\Prática\d010\pacote-projeto-d010\index.html">Site Android</a> <br>
-<a href="C:\Users\marco\OneDrive\Documentos\GitHub\HTTP5-e-CSS3\Calculadora\calculadora.html">Calculadora <strong>(win11)</strong></a>
+<a href="HTTP5-e-CSS3\Prática\d010\pacote-projeto-d010\index.html">Site Android</a> <br>
+<a href="HTTP5-e-CSS3\Calculadora\calculadora.html">Calculadora <strong>(win11)</strong></a>
 
 ## AULA 1:
 * História da internet - guerra fria (1949)
