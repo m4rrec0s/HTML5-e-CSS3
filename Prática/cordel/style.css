@@ -18,7 +18,7 @@
 
 html, body {
     height: 100vh;
-    background-color: darkgray;
+    background-color: rgb(255, 255, 255);
     font-family: var(--fonte1);
 }
 
@@ -26,6 +26,7 @@ header {
     background-color: black;
     color: white;
     text-align: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.959);
 }
 
 header h1 {
@@ -36,7 +37,7 @@ header h1 {
 }
 
 header p {
-    padding-bottom: 50px;
+    padding-bottom: 10vh;
 }
 
 header a, footer a {
@@ -49,22 +50,38 @@ header a:hover, footer a:hover {
     text-decoration: underline;
 }
 
+section {
+    font-size: 2em;
+    font-family: var(--fonte3);
+}
+
+section p {
+    padding: 20px 30px;
+}
+
 .normal {
     background-color: white;
     color: black;
-    font-family: var(--fonte3);
-    padding-top: 20px;
-    padding-left: 15px;
-    font-size: 2em;
 }
 
 .imagem {
-    background-color: aquamarine;
-    color: black;
-    font-family: var(--fonte3);
-    padding-left: 15px;
-    padding-top: 20px;
-    font-size: 2em;
+    background: aquamarine url('imagens/mr\ robot\ 1.jpeg') center center no-repeat fixed;
+    background-size: cover;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    border-radius: 10px;
+}
+
+.imagem p {
+    display: inline-block;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.671);
+    box-shadow: inset 1px 1px 13px 0px rgba(255, 255, 255, 0.589);
+    border-radius: 10px;
+}
+
+#img2 {
+    background-image: url("imagens/Mr\ Robot\ 2.jpeg");
 }
 
 footer {
@@ -72,4 +89,28 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+/* Estilo para telas grandes (desktops e laptops) */
+@media screen and (min-width: 1024px) {
+    section {
+        width: 100%;
+        font-size: 2em;
+    }
+  }
+  
+/* Estilo para telas médias (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    section {
+        width: 100%;
+        font-size: 1.6em;
+    }
+}
+
+/* Estilo para telas pequenas (celulares) */
+@media screen and (max-width: 767px) {
+    section {
+        width: 100%;
+        font-size: 1.3em;
+    }
 }
