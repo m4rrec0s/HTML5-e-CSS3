@@ -40,14 +40,35 @@ header p {
     padding-bottom: 10vh;
 }
 
-header a, footer a {
+a {
     color: white;
     text-decoration: none;
     font-weight: bolder;
+    position: relative;
 }
 
-header a:hover, footer a:hover {
-    text-decoration: underline;
+/* Estilo do pseudo-elemento ::after */
+a::after {
+    /* Cria um conteúdo vazio */
+    content: "";
+    /* Posiciona o elemento de forma absoluta em relação ao link */
+    position: absolute;
+    /* Define a largura e a altura do elemento */
+    width: 0;
+    height: 2px;
+    /* Define a cor do elemento */
+    background-color: white;
+    /* Define a posição do elemento abaixo do link */
+    left: 0;
+    bottom: 0;
+    /* Adiciona uma transição de 0.3 segundos com efeito de ease-in-out */
+    transition: width 0.2s ease-in-out;
+}
+
+/* Estilo do pseudo-elemento ::after quando o mouse passa sobre o link */
+a:hover::after {
+    /* Define a largura do elemento como 100% do link */
+    width: 100%;
 }
 
 section {
@@ -56,7 +77,7 @@ section {
 }
 
 section p {
-    padding: 20px 30px;
+    padding: 20px 50px;
 }
 
 .normal {
@@ -65,15 +86,20 @@ section p {
 }
 
 .imagem {
-    background: aquamarine url('imagens/mr\ robot\ 1.jpeg') center center no-repeat fixed;
+    background: rgb(0, 0, 0) url('imagens/mr\ robot\ 1.jpeg') center center no-repeat fixed;
     background-size: cover;
     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
     border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .imagem p {
     display: inline-block;
-    margin: 10px;
+    padding: 20px;
+    margin: 30px;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.671);
     box-shadow: inset 1px 1px 13px 0px rgba(255, 255, 255, 0.589);
@@ -109,8 +135,15 @@ footer {
 
 /* Estilo para telas pequenas (celulares) */
 @media screen and (max-width: 767px) {
+    header h1{
+        font-size: 8vh;
+    }
+
     section {
         width: 100%;
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
-}
+    #img2 {
+        background: aquamarine url('imagens/mr\ robot\ 2.jpeg') center right no-repeat fixed;
+        background-size: cover;
+}}
