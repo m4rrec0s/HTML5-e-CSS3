@@ -83,6 +83,7 @@ section p {
 .normal {
     background-color: white;
     color: black;
+    margin-bottom: 10px;
 }
 
 .imagem {
@@ -144,5 +145,9 @@ footer {
     section {
         width: 100%;
         font-size: 1.2em;
+    }
+
+    section#img2 {
+        background-position: center right;
     }
 }
