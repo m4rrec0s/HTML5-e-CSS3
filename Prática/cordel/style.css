@@ -86,7 +86,7 @@ section p {
 }
 
 .imagem {
-    background: rgb(0, 0, 0) url('imagens/mr\ robot\ 1.jpeg') center center no-repeat fixed;
+    background: rgb(0, 0, 0) center center no-repeat fixed;
     background-size: cover;
     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
     border-radius: 10px;
@@ -105,9 +105,11 @@ section p {
     box-shadow: inset 1px 1px 13px 0px rgba(255, 255, 255, 0.589);
     border-radius: 10px;
 }
-
+#img1 {
+    background-image: url('imagens/mr-robot1.jpeg');
+}
 #img2 {
-    background-image: url("imagens/Mr\ Robot\ 2.jpeg");
+    background-image: url("imagens/mr-robot2.jpeg");
 }
 
 footer {
@@ -143,7 +145,4 @@ footer {
         width: 100%;
         font-size: 1.2em;
     }
-    #img2 {
-        background: aquamarine url('imagens/mr\ robot\ 2.jpeg') center right no-repeat fixed;
-        background-size: cover;
-}}
+}
