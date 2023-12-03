@@ -14,7 +14,7 @@ class Calcular {
     
     addnum(num) {
         // Só deixa 1 vírgula
-        if (num === "," && this.curTxt.innerText.includes(",")) {
+        if (num === "." && this.curTxt.innerText.includes(".")) {
             return;
         }
         this.cur += num;
@@ -130,7 +130,7 @@ buttons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
         const value = e.target.innerText;
 
-        if (+value >= 0 || value === ",") {
+        if (+value >= 0 || value === ".") {
             calc.addnum(value);
         } else if (value === "C" || value === "CE") {
             // Limpar a tela
