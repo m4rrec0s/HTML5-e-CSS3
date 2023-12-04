@@ -29,9 +29,9 @@ body {
 }
 
 #bloco1 {
-    background-image: url(/Prática/yelp_camp/Assets/Hero_Image.jpg);
+    background-image: url(../Assets/Hero_Image.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 50%;
     background-position: right;
 }
 
@@ -105,10 +105,28 @@ div.apoiadores img {
     }
 }
 
+@media screen and (max-width: 1080px) {
+    #bloco1 {
+        width: 90%;
+        height: 90%;
+        background-size: 40%;
+    }
+
+}
+
 @media screen and (max-width: 1018px) {
     #bloco1 {
         width: 90%;
         height: 100%;
+        background-size: 50% 100%;
+    }
+}
+
+@media screen and (max-width: 948px) {
+    #bloco1 {
+        width: 90%;
+        height: 100%;
+        background-size: 45% 100%;
     }
 }
 
@@ -154,11 +172,18 @@ div.apoiadores img {
         padding: 0;
     }
 
+    img#logo {
+        width: 70px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
     #img_mobile {
         margin: auto;
-        background-image: url(/Prática/yelp_camp/Assets/Hero_Image_Mobile.jpg);
+        background-image: url(../Assets/Hero_Image_Mobile.jpg);
         width: 100%;
-        height: 200px;
+        height: 300px;
         background-size: cover; /* Ajusta o tamanho da imagem para cobrir a div */
         background-position: center center; /* Centraliza a imagem na div */
     }
