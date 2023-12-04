@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700&display=swap');
+
+/*font-family: 'Archivo', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --titulos: 'Archivo'
+}
+
+body {
+    background-color: #F4F0E9;
+}
+
+#bloco1 {
+    margin: auto;
+    margin-top: 50px;
+    width: 850px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.192);
+}
+
+#bloco1 {
+    background-image: url(/Prática/yelp_camp/Assets/Hero_Image.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+img#logo {
+    width: 70px;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+#conteudo h1 {
+    font-family: var(--titulos);
+    font-size: 35px;
+    margin-left: 80px;
+    margin-top: 50px;
+    width: 350px;
+}
+
+#conteudo p {
+    font-family: var(--titulos);
+    width: 350px;
+    font-size: 15px;
+    margin-left: 80px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+#conteudo button {
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px ;
+    font-size: 14px;
+    color: #fff;
+    background-color: black;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#conteudo button:hover {
+    background-color: rgb(168, 168, 168);
+}
+
+div#check {
+    padding-top: 5px;
+}
+
+#check img {
+    height: 20px;
+    vertical-align: middle; /* Centraliza verticalmente em relação ao texto */
+    margin-right: 10px; /* Adiciona um espaço à direita da imagem */
+}
+
+#check p {
+    font-weight: 500;
+}
+
+div.apoiadores {
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+div.apoiadores img {
+    height: 30px;
+}
+
+@media screen and (max-width: 1500px) {
+    #bloco1 {
+        width: 80%;
+        height: 90%;
+    }
+}
+
+@media screen and (max-width: 1018px) {
+    #bloco1 {
+        width: 90%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    #bloco1 {
+        margin: 0;
+        width: 100%;
+        height: 550px;
+    }
+
+    img#logo {
+        width: 70px;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    #conteudo h1 {
+        margin-left: 40px;
+    }
+
+    #conteudo p {
+        margin-left: 40px;
+        width: 300px;
+    }
+
+    #conteudo button {
+        margin-left: 40px;
+    }
+
+    #conteudo p {
+        margin-left: 40px;
+    }
+
+    div.apoiadores {
+        margin-left: 35px;
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #img_mobile {
+        margin: auto;
+        background-image: url(/Prática/yelp_camp/Assets/Hero_Image_Mobile.jpg);
+        width: 100%;
+        height: 200px;
+        background-size: cover; /* Ajusta o tamanho da imagem para cobrir a div */
+        background-position: center center; /* Centraliza a imagem na div */
+    }
+
+    #bloco1 {
+        width: 100%;
+        height: 100%;
+        background-image: none;
+    }
+
+    #conteudo h1 {
+        font-family: var(--titulos);
+        font-size: 25px;
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 250px;
+    }
+    
+    #conteudo p {
+        font-family: var(--titulos);
+        font-size: 14px;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-weight: 300;
+    }
+
+    #conteudo button {
+        margin-left: 20px;
+    }
+
+    div.apoiadores {
+        margin-left: 20px;
+        padding-bottom: 20px;
+    }
+}
