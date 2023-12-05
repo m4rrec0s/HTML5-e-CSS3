@@ -209,6 +209,7 @@ div.apoiadores img {
         height: 100%;
         background-image: none;
         border-radius: 0;
+        box-shadow: none;
     }
 
     #conteudo h1 {
