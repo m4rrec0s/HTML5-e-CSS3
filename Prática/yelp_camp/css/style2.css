@@ -46,11 +46,36 @@ body {
     background-color: #4b4b4b;
 }
 
+#create:active {
+    animation-duration: 2s;
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0px 0px 1px inset black;
+}
+
 #links1 a, #links2 a {
     text-decoration: none;
 }
-#home, #login {
+
+a#home, a#login {
     color: #272727;
+    position: relative; /* Para posicionar o pseudo-elemento */
+    text-decoration: none; /* Removendo o underline padrão */
+}
+
+a#home::after, a#login::after {
+    content: ""; /* Criando um pseudo-elemento para a animação */
+    position: absolute; /* Posicionando o pseudo-elemento */
+    left: 0; /* Alinhando à esquerda */
+    bottom: -1px; /* Ajustando a posição vertical */
+    width: 0; /* Começa sem largura */
+    height: 2px; /* Altura da linha */
+    background-color: #272727; /* Cor da linha */
+    transition: width 0.3s ease; /* Animação da largura */
+}
+
+a#home:hover::after, a#login:hover::after {
+    width: 100%; /* Largura completa ao passar o mouse */
 }
 
 #links1 {
@@ -117,10 +142,18 @@ div#caixa_busca_div {
     color: #ffffff;
     background-color: black;
     border-radius: 5px;
+    border: none;
 }
 
 #busca button:hover {
     background-color: #4b4b4b;
+}
+
+#busca button:active {
+    animation-duration: 2s;
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0px 0px 1px inset black;
 }
 
 #busca p#add_camp {
@@ -172,8 +205,35 @@ div#caixa_busca_div {
 
 #bloco_camps > div > input {
     margin: auto;
-    padding: 6% 30%;
+    width: 100%;
+    height: 15%;
+    display: block;
     color: black;
     font-weight: bold;
-    border: 0.5 solid black;
+    border: none;
+    box-shadow: 0px 0px 1px 0px inset black;
+    margin-bottom: 20px;
+    background-color: white; /* Cor inicial */
+    transition: background-color 0.5s ease; /* Animação da transição */
+}
+
+#bloco_camps > div > input:hover {
+    background-color: black; /* Cor ao passar o mouse */
+    color: white;
+}
+
+#bloco_camps > div > input:active {
+    animation-duration: 2s;
+    background-color: rgb(184, 184, 184);
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
