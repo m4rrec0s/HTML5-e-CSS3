@@ -18,26 +18,53 @@ body {
     background-color: #ffffff;
 }
 
-img#logo {
-    width: 100px;
 
+#links-container {
+    font-family: var(--titulos);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+#links1 img {
+    margin-right: 30px;
+}
+
+#create {
+    margin-left: 15px;
+    padding: 15px 20px;
+    background-color: black;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+#create:hover {
+    background-color: #4b4b4b;
+}
+
+#links1 a, #links2 a {
+    text-decoration: none;
+}
+#home, #login {
+    color: #272727;
 }
 
 #links1 {
-    margin-top: 8vh;
-    margin-left: 25vh;
+    display: flex; /* Adiciona flex para #links2 */
+    align-items: center; /* Alinha itens verticalmente dentro de #links2 */
 }
 
-a#home, #login, #create {
-    font-family: var(--titulos);
-    color: rgb(49, 49, 49);
-    text-decoration: none;
-    font-weight: 500;
+#links2 {
+    display: flex; /* Adiciona flex para #links2 */
+    align-items: center; /* Alinha itens verticalmente dentro de #links2 */
 }
-
 
 #busca {
-    background-color: rgba(255, 249, 244, 0.541);
+    background-color: rgba(214, 181, 156, 0.226);
     width: 80%;
     height: 300px;
     margin: auto;
@@ -92,6 +119,10 @@ div#caixa_busca_div {
     border-radius: 5px;
 }
 
+#busca button:hover {
+    background-color: #4b4b4b;
+}
+
 #busca p#add_camp {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -100,4 +131,49 @@ div#caixa_busca_div {
 #busca a {
     color: rgb(44, 44, 44);
     font-size: 14px;
+}
+
+#bloco_camps {
+    font-family: var(--titulos);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espaçamento entre as colunas */
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+#bloco_camps > div {
+    text-align: left; /* Alinhar o conteúdo no centro */
+    border: 1px solid #ccc; /* Adicionar borda para melhor visualização */
+    padding: 15px; /* Adicionar algum espaçamento interno */
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.171);
+}
+
+#bloco_camps img {
+    max-width: 100%; /* Ajustar a largura da imagem para ocupar 100% da largura do contêiner pai */
+    height: auto; /* Manter a proporção da imagem */
+    border-radius: 5px;
+}
+
+#bloco_camps h2 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+#bloco_camps p {
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+#bloco_camps > div > input {
+    margin: auto;
+    padding: 6% 30%;
+    color: black;
+    font-weight: bold;
+    border: 0.5 solid black;
 }
