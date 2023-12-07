@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700&display=swap');
+
+/*font-family: 'Archivo', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --titulos: 'Archivo'
+}
+
+body {
+    display: flex;
+    font-family: var(--titulos);
+    background-color: #fff2e7;
+}
+
+#bloco_login {
+    background-color: #fff;
+
+    width: 50%;
+    height: 95vh;
+    padding-top: 5vh;
+    padding-left: 20vh;
+
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.171);
+}
+
+#bloco_login h1 {
+    margin-bottom: 40px;
+    width: 78%;
+    font-size: 5vh;
+    word-spacing: 0.1em;
+
+}
+
+#bloco_login input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 63%;
+    height: 7vh;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px black;
+}
+
+#bloco_login button {
+    display: block;
+    width: 65%;
+    height: 7vh;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: #fff;
+    transition: background-color 0.5s ease; /* Animação da transição */
+}
+
+#bloco_login button:hover {
+    font-weight: bold;
+    background-color: rgb(180, 180, 180); /* Cor ao passar o mouse */
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.425);
+}
+
+#bloco_login p {
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+    font-size: 2.5vh;
+}
+
+#bloco_login a {
+    color: rgb(0, 187, 187);
+    font-weight: bold;
+}
+
+
+#links-container {
+    font-family: var(--titulos);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    margin-bottom: 20vh;
+}
+
+
+#links-container img {
+    width: 18vh;
+}
+
+#links-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #27272769;
+    font-size: 2.3vh;
+    position: relative;
+    text-decoration: none;
+}
+
+#links-container a::after {
+    content: ""; /* Criando um pseudo-elemento para a animação */
+    position: absolute; /* Posicionando o pseudo-elemento */
+    left: 0; /* Alinhando à esquerda */
+    bottom: -1px; /* Ajustando a posição vertical */
+    width: 0; /* Começa sem largura */
+    height: 2px; /* Altura da linha */
+    background-color: #27272769; /* Cor da linha */
+    transition: width 0.3s ease; /* Animação da largura */
+}
+
+#links-container a:hover::after {
+    width: 100%; /* Largura completa ao passar o mouse */
+}
+
+#links-container a:active {
+    color: black;
+}
+
+#comment {
+    display: block;
+    margin: auto;
+    background-color: #ffffff27;
+    width: 50vh;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.397);
+}
+
+#comment p {
+    margin-bottom: 15px;
+}
+
+.container {
+    min-height: 100px; /* Altura desejada para centralização vertical */
+    display: inline;
+  }
+
+.name {
+    font-weight: bold;
+}
+

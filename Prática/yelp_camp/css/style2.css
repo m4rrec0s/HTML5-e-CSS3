@@ -186,9 +186,10 @@ div#caixa_busca_div {
 }
 
 #bloco_camps img {
-    max-width: 100%; /* Ajustar a largura da imagem para ocupar 100% da largura do contêiner pai */
+    width: 100%; /* Ajustar a largura da imagem para ocupar 100% da largura do contêiner pai */
     height: auto; /* Manter a proporção da imagem */
     border-radius: 5px;
+    margin: auto;
 }
 
 #bloco_camps h2 {
@@ -205,14 +206,17 @@ div#caixa_busca_div {
 
 #bloco_camps > div > input {
     margin: auto;
-    width: 100%;
-    height: 15%;
+    width: 53vh;
+    height: 10vh;
     display: block;
+    
     color: black;
     font-weight: bold;
     border: none;
     box-shadow: 0px 0px 1px 0px inset black;
-    margin-bottom: 20px;
+    
+    margin-bottom: 5px;
+    margin-top: 15px;
     background-color: white; /* Cor inicial */
     transition: background-color 0.5s ease; /* Animação da transição */
 }
@@ -223,7 +227,7 @@ div#caixa_busca_div {
 }
 
 #bloco_camps > div > input:active {
-    animation-duration: 2s;
+    animation-duration: 4s;
     background-color: rgb(184, 184, 184);
 }
 
