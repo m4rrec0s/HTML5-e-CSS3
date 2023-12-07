@@ -17,7 +17,7 @@
 body {
     display: flex;
     font-family: var(--titulos);
-    background-color: #fff2e7;
+    background-color: rgba(255, 242, 231, 0.795);
 }
 
 #bloco_login {
@@ -128,22 +128,17 @@ body {
     display: block;
     margin: auto;
     background-color: #ffffff27;
-    width: 50vh;
+    width: 45vh;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.397);
 }
 
-#comment p {
-    margin-bottom: 15px;
-}
-
 .container {
-    min-height: 100px; /* Altura desejada para centralização vertical */
-    display: inline;
-  }
-
-.name {
-    font-weight: bold;
+    display: flex;
 }
 
+#nome {
+    padding-left: 10px;
+    font-weight: 300;
+}
