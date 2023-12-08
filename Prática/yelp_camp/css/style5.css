@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;700&display=swap');
+
+/*font-family: 'Archivo', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --titulos: 'Archivo', 'sans-serif'
+}
+
+body {
+    font-family: var(--titulos);
+    background-color: #ffffff;
+}
+
+
+#links-container {
+    font-family: var(--titulos);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#links1 img {
+    margin-right: 30px;
+}
+
+#create {
+    margin-left: 15px;
+    padding: 15px 20px;
+    background-color: black;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+#create:hover {
+    background-color: #4b4b4b;
+}
+
+#create:active {
+    animation-duration: 2s;
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0px 0px 1px inset black;
+}
+
+#links1 a, #links2 a {
+    text-decoration: none;
+}
+
+a#home, a#login {
+    color: #272727;
+    position: relative; /* Para posicionar o pseudo-elemento */
+    text-decoration: none; /* Removendo o underline padrão */
+}
+
+a#home::after, a#login::after {
+    content: ""; /* Criando um pseudo-elemento para a animação */
+    position: absolute; /* Posicionando o pseudo-elemento */
+    left: 0; /* Alinhando à esquerda */
+    bottom: -1px; /* Ajustando a posição vertical */
+    width: 0; /* Começa sem largura */
+    height: 2px; /* Altura da linha */
+    background-color: #272727; /* Cor da linha */
+    transition: width 0.3s ease; /* Animação da largura */
+}
+
+a#home:hover::after, a#login:hover::after {
+    width: 100%; /* Largura completa ao passar o mouse */
+}
+
+#links1 {
+    display: flex; /* Adiciona flex para #links2 */
+    align-items: center; /* Alinha itens verticalmente dentro de #links2 */
+}
+
+#links2 {
+    display: flex; /* Adiciona flex para #links2 */
+    align-items: center; /* Alinha itens verticalmente dentro de #links2 */
+}
+
+#bloco_add {
+    margin: auto;
+    width: 40%;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+#bloco_add h1 {
+    margin-bottom: 20px;
+    width: 78%;
+    font-size: 5vh;
+    word-spacing: 0.1em;
+
+}
+
+#bloco_add p {
+    color: rgb(75, 75, 75);
+    font-weight: 400;
+    font-size: 2.5vh;
+}
+
+#bloco_add input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 96%;
+    height: 8%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px black;
+    transition: 1s ease-in-out;
+}
+
+
+#description {
+    font-family: var(--titulos);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 96%;
+    height: 8%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px black;
+    transition: 1s ease-in-out;
+}
+
+#description::placeholder {
+    color: rgba(0, 0, 0, 0.384);
+}
+
+
+#bloco_add button {
+    display: block;
+    width: 100%;
+    height: 8%;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: #fff;
+    transition: background-color 0.5s ease; /* Animação da transição */
+}
+
+#bloco_add button:hover {
+    font-weight: bold;
+    background-color: rgb(180, 180, 180); /* Cor ao passar o mouse */
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.425);
+}
