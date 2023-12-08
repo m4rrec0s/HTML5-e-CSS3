@@ -11,7 +11,7 @@
 }
 
 :root {
-    --titulos: 'Archivo'
+    --titulos: 'Archivo', 'sans-serif'
 }
 
 body {
@@ -119,7 +119,7 @@ div#caixa_busca_div {
     font-size: 13px;
     margin-left: 50px;
     padding-left: 35px; /* Espaço para acomodar a imagem */
-    padding-right: 20px; /* Adiciona um espaçamento à direita para melhor aparência */
+    padding-right: 50px; /* Adiciona um espaçamento à direita para melhor aparência */
     padding-top: 25px;
     padding-bottom: 25px;
     background-image: url('../Assets/Search Icon.svg');
@@ -170,19 +170,24 @@ div#caixa_busca_div {
     font-family: var(--titulos);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Espaçamento entre as colunas */
-    width: 80%;
-    height: 100%;
+    gap: 1%; /* Espaçamento entre as colunas */
+    max-width: 80%;
+    height: auto;
     margin: auto;
     padding-bottom: 60px;
 }
 
 #bloco_camps > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: left; /* Alinhar o conteúdo no centro */
     border: 1px solid #ccc; /* Adicionar borda para melhor visualização */
     padding: 15px; /* Adicionar algum espaçamento interno */
     border-radius: 5px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.171);
+
+    max-width: 100%;
 }
 
 #bloco_camps img {
@@ -206,19 +211,22 @@ div#caixa_busca_div {
 
 #bloco_camps > div > input {
     margin: auto;
-    width: 53vh;
-    height: 10vh;
-    display: block;
-    
+    display: inline-block;
+
     color: black;
     font-weight: bold;
     border: none;
     box-shadow: 0px 0px 1px 0px inset black;
-    
+
     margin-bottom: 5px;
-    margin-top: 15px;
+    margin-top: 5px;
     background-color: white; /* Cor inicial */
     transition: background-color 0.5s ease; /* Animação da transição */
+    width: 100%; /* Use uma porcentagem que se adapte ao seu layout */
+    height: 10vh;
+
+    /* Adicione um máximo para evitar que o input fique muito largo */
+    max-width: 100%; /* ou ajuste conforme necessário */
 }
 
 #bloco_camps > div > input:hover {
