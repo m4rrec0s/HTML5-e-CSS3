@@ -40,10 +40,13 @@ body {
     background-color: black;
     color: #ffffff;
     border-radius: 5px;
+    transition: background-color 0.4s ease-in-out;
 }
 
 #create:hover {
-    background-color: #4b4b4b;
+    background-color: #fcfcfc;
+    color: black;
+    box-shadow: 0px 0px 2px inset black;
 }
 
 #create:active {
@@ -138,15 +141,18 @@ div#caixa_busca_div {
 
 #busca button {
     margin-left: 10px;
-    padding: 15px;
+    padding: 17.5px;
     color: #ffffff;
     background-color: black;
     border-radius: 5px;
     border: none;
+    transition: background-color 0.4s ease-in-out;
 }
 
 #busca button:hover {
-    background-color: #4b4b4b;
+    background-color: #fcfcfc;
+    color: black;
+    box-shadow: 0px 0px 2px inset black;
 }
 
 #busca button:active {
@@ -156,14 +162,19 @@ div#caixa_busca_div {
     box-shadow: 0px 0px 1px inset black;
 }
 
-#busca p#add_camp {
+#busca p.add_camp {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-#busca a {
+a.add_camp {
     color: rgb(44, 44, 44);
     font-size: 14px;
+    transition: color 0.2s ease-in;
+}
+
+a.add_camp:hover {
+    color: rgb(0, 150, 150);
 }
 
 #bloco_camps {
