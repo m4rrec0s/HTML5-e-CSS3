@@ -25,24 +25,24 @@ body {
 
     width: 50%;
     height: 100vh;
-    padding-top: 5vh;
-    padding-left: 20vh;
+    padding-top: 30px;
+    padding-left: 100px;
+
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.171);
 }
 
 #bloco_create h1 {
-    margin-bottom: 35px;
-    width: 78%;
-    font-size: 5vh;
+    margin-bottom: 40px;
+    width: 420px;
+    font-size: 5.2vh;
     word-spacing: 0.1em;
-
 }
 
 #bloco_create input {
     margin-top: 10px;
     margin-bottom: 20px;
-    width: 63%;
-    height: 8%;
+    width: 408px;
+    height: 45px;
     padding-left: 10px;
     border: none;
     border-radius: 5px;
@@ -52,8 +52,8 @@ body {
 
 #bloco_create button {
     display: block;
-    width: 65%;
-    height: 8%;
+    width: 420px;
+    height: 45px;
     margin-bottom: 15px;
     border: none;
     border-radius: 5px;
