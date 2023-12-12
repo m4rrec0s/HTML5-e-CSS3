@@ -1,0 +1,15 @@
+#bloco_login input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px black;
+    outline: none; /* Remove a borda de foco padrão */
+}
+
+#bloco_login input.active {
+    box-shadow: 0px 0px 2px rgb(255, 8, 0);
+}
