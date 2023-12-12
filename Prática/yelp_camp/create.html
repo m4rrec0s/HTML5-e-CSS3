@@ -19,7 +19,12 @@
             <p>Email</p>
             <input type="email" placeholder="Enter your email" id="email">
             <p>Password</p>
-            <input type="password" placeholder="Enter your password" id="password">
+            <div class="password-container">
+                <input type="password" placeholder="Enter an Password" id="password">
+                <label for="password" id="olho" class="olho">
+                    <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" alt="Show Password" id="olho" class="olho">
+                </label>
+            </div>
             <button onclick="createAccount()">Create an account</button>
             <p id="link">Already a user? <a href="login.html">Sing Ip</a></p>
         </form>
