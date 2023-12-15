@@ -90,6 +90,10 @@ a#change {
     font-size: 13px;
 }
 
+a#change:hover {
+    color: #7c70ff;
+}
+
 a#pagamento {
     display: block;
     margin: auto;
@@ -105,6 +109,11 @@ a#pagamento {
     text-decoration: none;
     border-radius: 5px;
     box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.254);
+    transition: background-color 0.3s ease-in-out;
+}
+
+a#pagamento:hover {
+    background-color: #766CF1;
 }
 
 a#cancel {
@@ -113,9 +122,14 @@ a#cancel {
     text-align: center;
     text-decoration: none;
 
-    color: var(--Dark-blue);
+    color: var(--azul);
     font-size: 13px;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a#cancel:hover {
+    color: var(--Dark-blue);
 }
 
 svg {
