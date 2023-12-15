@@ -137,4 +137,10 @@ svg {
     bottom: 0;
     left: 0;
 }
- 
+
+@media screen and (max-width: 400px){
+    .wave-background {
+        width: 50vh;
+        height: 90vh;
+    }
+}
