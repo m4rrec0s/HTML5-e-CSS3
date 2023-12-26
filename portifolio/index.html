@@ -48,56 +48,76 @@
                 <a href="#" class="contact">CONTACT ME</a>
             </div>
             <div class="projetos">
-                <div class="poj">
-                    <img src="imagens/desktop-completed.jpg" alt="proj1">
-                    <h3>Age Calculator</h3>
-                    <div class="lingua">
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JS</p>
+                <a href="#">
+                    <div class="poj">
+                        <img src="imagens/desktop-completed.jpg" alt="proj1">
+                        <h3>Age Calculator</h3>
+                        <div class="lingua">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JS</p>
+                        </div>
                     </div>
-                </div>
-                <div class="poj">
-                    <img src="imagens/Captura de tela 2023-12-25 165503.png" alt="proj2">
-                    <h3>Yelp Camp</h3>
-                    <div class="lingua">
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JS</p>
+                </a>
+                <a href="#">
+                    <div class="poj">
+                        <img src="imagens/Captura de tela 2023-12-25 165503.png" alt="proj2">
+                        <h3>Yelp Camp</h3>
+                        <div class="lingua">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JS</p>
+                        </div>
                     </div>
-                </div>
-                <div class="poj">
-                    <img src="imagens/login.png" alt="proj3">
-                    <h3>Login Screen</h3>
-                    <div class="lingua">
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JS</p>
+                </a>
+                <a href="#">
+                    <div class="poj">
+                        <img src="imagens/login.png" alt="proj3">
+                        <h3>Login Screen</h3>
+                        <div class="lingua">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JS</p>
+                        </div>
                     </div>
-                </div>
-                <div class="poj">
-                    <img src="imagens/calculadora-win11.png" alt="proj4">
-                    <h3>Calculator for Windows 11</h3>
-                    <div class="lingua">
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JS</p>
+                </a>
+                <a rel="noopener" href="https://m4rrec0s.github.io/HTML5-e-CSS3/Calculadora/calculadora.html" target="_blank">
+                    <div class="poj">
+                        <img src="imagens/calculadora-win11.png" alt="proj4">
+                        <h3>Calculator for Windows 11</h3>
+                        <div class="lingua">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JS</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
-        <div class="bloco4">
+        <div id="both"></div>
+    </section>
+    <footer>
+        <div id="main_footer">
             <div class="contato">
                 <h1>Contact</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil qui, vitae dicta recusandae ullam labore, ipsum nam quaerat porro delectus illum quis quam.</p>
             </div>
             <form>
-                <input type="text" id="nome" placeholder="NAME">
-                <input type="email" id="email" placeholder="EMAIL">
-                <input type="text" id="msg" placeholder="MESSAGE">
+                <div class="input-container">
+                    <input type="text" id="nome" required>
+                    <label for="nome">NAME</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" id="email" required>
+                    <label for="email">EMAIL</label>
+                </div>
+                <div class="input-container textarea-container">
+                    <textarea id="msg" rows="4" required></textarea>
+                    <label for="msg">MESSAGE</label>
+                </div>
                 <button type="submit" onclick="enviarMensagem()">SEND MESSAGE</button>
             </form>
         </div>
-    </section>
+    </footer>
 </body>
 </html>
