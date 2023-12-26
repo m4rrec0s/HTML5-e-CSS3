@@ -90,10 +90,43 @@ section {
     line-height: 25px;
 }
 
-.contact {
+a.contact {
+    position: relative;
     color: var(--branco);
-    text-decoration: underline var(--verde) 4px;
-    transition: text-decoration 1s ease-in-out;
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-block;
+    padding: 5px 5px 0px 5px;
+}
+
+a.contact::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Altura inicial de 2px */
+    bottom: 0;
+    left: 0;
+    background-color: var(--verde);
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform 1s ease-in-out, height 1s ease-in-out, background-color 1s ease-in-out;
+    z-index: -1; /* Mova a linha para trás do texto */
+}
+
+a.contact:hover::before {
+    transform: scaleY(1);
+    height: 100%; /* Altura final de 4px */
+    background-color: var(--verde);
+    font-weight: 700;
+}
+
+/* Adicione esta regra para garantir que a altura inicial seja exibida mesmo quando não estiver em foco */
+a.contact::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--verde);
 }
 
 
@@ -263,13 +296,14 @@ input, textarea {
 }
 
 .textarea-container {
-    height: 50px; /* Altura inicial desejada */
-    transition: height 0.3s; /* Adiciona transição para a propriedade height */
+    position: relative;
 }
 
 textarea {
-    height: 100%; /* Define altura 100% para se ajustar ao container */
+    height: 50px; /* Altura inicial desejada */
     resize: none; /* Impede redimensionamento manual do textarea */
+    font-family: var(--fonte);
+    font-size: 12px;
 }
 
 label {
@@ -280,14 +314,21 @@ label {
     font-size: 12px;
     pointer-events: none;
     transition: 0.3s;
+    z-index: 1;
+}
+
+.textarea-container textarea:focus, input:focus {
+    border-bottom: 1px solid #4de29f; /* Adiciona destaque ao focar */
 }
 
 .textarea-container textarea:focus {
-    height: 70px; /* Altura aumentada ao focar */
+    height: 90px; /* Altura aumentada ao focar */
+    font-size: 10px;
+    font-family: var(--fonte);
 }
 
 textarea:focus + label {
-    bottom: 40px;
+    bottom: 85px;
     font-size: 10px;
     padding-top: 10px;
 }
