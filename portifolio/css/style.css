@@ -96,7 +96,6 @@ a.contact {
     text-decoration: none;
     overflow: hidden;
     display: inline-block;
-    padding: 5px 5px 0px 5px;
 }
 
 a.contact::before {
@@ -109,7 +108,7 @@ a.contact::before {
     background-color: var(--verde);
     transform-origin: bottom;
     transform: scaleY(0);
-    transition: transform 1s ease-in-out, height 1s ease-in-out, background-color 1s ease-in-out;
+    transition: transform 0.5s ease-in-out, height 0.5s ease-in-out, background-color 0.6s ease-in-out;
     z-index: -1; /* Mova a linha para trás do texto */
 }
 
@@ -121,6 +120,7 @@ a.contact:hover::before {
 }
 
 /* Adicione esta regra para garantir que a altura inicial seja exibida mesmo quando não estiver em foco */
+
 a.contact::after {
     content: '';
     display: block;
@@ -268,6 +268,10 @@ footer {
     line-height: 25px;
 }
 
+#main_footer {
+    margin-top: 60px;
+}
+
 #main_footer > form {
     margin-left: 40px;
 }
@@ -300,10 +304,15 @@ input, textarea {
 }
 
 textarea {
+    margin-top: 20px;
     height: 50px; /* Altura inicial desejada */
     resize: none; /* Impede redimensionamento manual do textarea */
     font-family: var(--fonte);
     font-size: 12px;
+}
+
+textarea:valid {
+    height: 100%; /* Altura automática quando há texto dentro */
 }
 
 label {
@@ -317,6 +326,10 @@ label {
     z-index: 1;
 }
 
+#msg-label {
+    bottom: 15px;
+}
+
 .textarea-container textarea:focus, input:focus {
     border-bottom: 1px solid #4de29f; /* Adiciona destaque ao focar */
 }
@@ -327,10 +340,11 @@ label {
     font-family: var(--fonte);
 }
 
-textarea:focus + label {
-    bottom: 85px;
+textarea:focus + label#msg-label {
+    bottom: 95px;
     font-size: 10px;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 input:focus + label {
@@ -338,13 +352,49 @@ input:focus + label {
     font-size: 10px;
 }
 
+
+
+
 form > button {
+    position: relative;
     margin-top: 20px;
     background-color: transparent;
     color: var(--branco);
     border: none;
-    text-decoration: underline var(--verde) 4px;
-    transition: text-decoration 1s ease-in-out;
+    overflow: hidden;
+    display: inline-block;
+    padding-bottom: 3px;
+}
+
+form > button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px; /* Altura da linha */
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #4de29f 0%, #4de29f 50%, transparent 50%, transparent 100%);
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    animation: moveBackground 2s linear infinite; /* Adiciona uma animação ao fundo */
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+form > button:hover::before {
+    background-position: -100% 0;
+    background-color: #4de29f; /* Cor de fundo durante a transição */
+}
+
+form > button:hover {
+    text-decoration: none; /* Remover sublinhado ao passar o mouse */
 }
 
 .linha2 {
