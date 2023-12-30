@@ -179,10 +179,11 @@ a.contact::after {
 .projetos {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Cria 3 colunas iguais */
-    gap: 20px; /* Espaçamento entre as colunas */
+    gap: 5px; /* Espaçamento entre as colunas */
 }
 
 .projetos a {
+    display: inline-block;
     color: var(--branco);
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
@@ -209,8 +210,9 @@ a.contact::after {
     width: 415px;
     height: 100%;
     border-radius: 10px;
-    overflow: hidden; /* Adicionado para cortar a borda ao escalar */
-    transition: background-color 0.3s; /* Adicionado para uma transição suave de cor */
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s; /* Adicionado para uma transição suave de cor */
+    margin: 0 10px 10px 0;
 }
 
 .poj img {
@@ -225,11 +227,8 @@ a.contact::after {
 
 }
 
-.projetos a:hover .poj {
+.poj:hover {
     background-color: #4c4c4c;
-}
-
-.projetos a:hover img {
     transform: scale(1.0);
 }
 
@@ -353,8 +352,6 @@ input:focus + label {
 }
 
 
-
-
 form > button {
     position: relative;
     margin-top: 20px;
@@ -401,4 +398,88 @@ form > button:hover {
     background-color: var(--branco);
     height: 1px;
     width: 100%;
+}
+
+
+.bloco1, .bloco2, .bloco3, .poj, footer {
+    visibility: hidden;
+}
+
+/* Para telas menores que 768px (exemplo: smartphones) */
+@media only screen and (max-width: 767px) {
+    
+    section {
+        max-width: 100%;
+    }
+
+    .apresen h1 {
+        font-size: 40px;
+        width: 100%;
+        line-height: 40px;
+    }
+    
+    .apresen p {
+        font-size: 10px;
+        width: 100%;
+        margin-bottom: 60px;
+        line-height: 20px;
+    }
+
+
+    /* Adicione mais ajustes conforme necessário */
+}
+
+/* Para telas entre 768px e 1023px (exemplo: tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    section {
+        max-width: 100%;
+        margin-left: 30px;
+    }
+
+    .apresen h1 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    
+    .apresen p {
+        font-size: 10px;
+        width: 50%;
+        margin-bottom: 60px;
+        line-height: 20px;
+    }
+
+    .projetos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Cria 3 colunas iguais */
+        gap: 20px; /* Espaçamento entre as colunas */
+    }
+
+    .poj {
+        background-color: rgba(169, 169, 169, 0);
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden; /* Adicionado para cortar a borda ao escalar */
+        transition: background-color 0.3s; /* Adicionado para uma transição suave de cor */
+    }
+    
+    .poj img {
+        max-width: 100%;
+        height: 250px;
+    }
+    
+    .poj h3 {
+        padding-left: 10px;
+        font-size: 22px;
+        margin-bottom: 10px;
+    
+    }
+
+    /* Adicione mais ajustes conforme necessário */
+}
+
+/* Para telas maiores que 1023px (exemplo: desktops) */
+@media only screen and (min-width: 1024px) {
+    /* Adicione ajustes específicos para telas de desktops */
 }
