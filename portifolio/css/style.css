@@ -229,7 +229,7 @@ a.contact::after {
 
 .poj:hover {
     background-color: #4c4c4c;
-    transform: scale(1.0);
+    transform: scale(1.05);
 }
 
 footer {
@@ -249,7 +249,7 @@ footer {
 #main_footer {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .contato {
@@ -265,10 +265,6 @@ footer {
     width: 400px;
     margin-bottom: 90px;
     line-height: 25px;
-}
-
-#main_footer {
-    margin-top: 60px;
 }
 
 #main_footer > form {
@@ -406,38 +402,161 @@ form > button:hover {
 }
 
 /* Para telas menores que 768px (exemplo: smartphones) */
-@media only screen and (max-width: 767px) {
+
+@media only screen and (max-width: 760px) {
     
     section {
-        max-width: 100%;
+        display: grid;
+        max-width: 90%;
+        justify-content: center;
+    }
+
+    .links {
+        display: grid;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .links p {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .my-img {
+        background-color: #cfcfcf;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 1px 0px;
+        width: 200px;
+        height: 300px;
+        background: url('../imagens/IMG_20230916_084019_790\ 1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-bottom: 40px;
+    }
+
+    .bloco1 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background-image: none;
     }
 
     .apresen h1 {
-        font-size: 40px;
+        text-align: center;
+        font-size: 35px;
         width: 100%;
         line-height: 40px;
     }
     
     .apresen p {
+        text-align: center;
         font-size: 10px;
         width: 100%;
         margin-bottom: 60px;
         line-height: 20px;
     }
 
+    .projetos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 20px; /* Espaçamento entre as colunas */
+    }
+
+    .bloco2 {
+        display: block;
+    }
+
+    .linguagens {
+        align-items: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .linguagens > div{
+        font-size: 40px;
+        font-weight: 500;
+        padding: 10px; /* Espaçamento interno */
+    }
+
+    .poj {
+        background-color: rgba(169, 169, 169, 0);
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden; /* Adicionado para cortar a borda ao escalar */
+        transition: background-color 0.3s; /* Adicionado para uma transição suave de cor */
+    }
+    
+    .poj img {
+        max-width: 100%;
+        height: 250px;
+    }
+    
+    .poj h3 {
+        padding-left: 10px;
+        font-size: 22px;
+        margin-bottom: 10px;
+    
+    }
+
+    #main_footer {
+        display: grid;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .contato {
+        margin-right: 0px;
+    }
+    
+    .contato h1 {
+        text-align: center;
+        font-size: 50px;
+    }
+    
+    .contato p {
+        font-size: 12px;
+        width: 400px;
+        margin-bottom: 90px;
+        line-height: 25px;
+        text-align: center;
+    }
+    
+    #main_footer > form {
+        margin-left: 0px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-container {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+
 
     /* Adicione mais ajustes conforme necessário */
 }
 
-/* Para telas entre 768px e 1023px (exemplo: tablets) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/* Para telas entre 481px e 768px (exemplo: tablets) */
+@media only screen and (min-width: 481px) and (max-width: 888px) {
     
     section {
-        max-width: 100%;
-        margin-left: 30px;
+        max-width: 90%;
     }
 
     .apresen h1 {
+        width: 80%;
         font-size: 50px;
         line-height: 50px;
     }
@@ -476,10 +595,43 @@ form > button:hover {
     
     }
 
-    /* Adicione mais ajustes conforme necessário */
-}
 
-/* Para telas maiores que 1023px (exemplo: desktops) */
-@media only screen and (min-width: 1024px) {
-    /* Adicione ajustes específicos para telas de desktops */
+    #main_footer {
+        display: grid;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .contato {
+        margin-right: 0px;
+    }
+    
+    .contato h1 {
+        text-align: center;
+        font-size: 50px;
+    }
+    
+    .contato p {
+        font-size: 12px;
+        width: 400px;
+        margin-bottom: 90px;
+        line-height: 25px;
+        text-align: center;
+    }
+    
+    #main_footer > form {
+        margin-left: 0px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-container {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
 }
