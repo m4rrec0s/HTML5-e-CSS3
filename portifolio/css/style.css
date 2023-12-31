@@ -90,38 +90,39 @@ section {
     line-height: 25px;
 }
 
-a.contact {
+button.contact {
     position: relative;
+    margin-top: 20px;
+    background-color: transparent;
     color: var(--branco);
-    text-decoration: none;
+    border: none;
     overflow: hidden;
     display: inline-block;
+    padding-bottom: 3px;
 }
 
-a.contact::before {
+button.contact::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px; /* Altura inicial de 2px */
+    height: 4px; /* Altura da linha */
     bottom: 0;
     left: 0;
-    background-color: var(--verde);
-    transform-origin: bottom;
-    transform: scaleY(0);
-    transition: transform 0.5s ease-in-out, height 0.5s ease-in-out, background-color 0.6s ease-in-out;
-    z-index: -1; /* Mova a linha para trás do texto */
+    background: linear-gradient(to right, #4de29f 0%, #4de29f 50%, transparent 50%, transparent 100%);
+    background-size: 200% 100%;
+    transition: height 0.5s ease-in-out, background-position 1s ease-in-out, background-color 1s ease-in-out;
 }
 
-a.contact:hover::before {
-    transform: scaleY(1);
+button.contact:hover::before {
     height: 100%; /* Altura final de 4px */
     background-color: var(--verde);
     font-weight: 700;
+    z-index: -1;
 }
 
 /* Adicione esta regra para garantir que a altura inicial seja exibida mesmo quando não estiver em foco */
 
-a.contact::after {
+button.contact::after {
     content: '';
     display: block;
     height: 2px;
@@ -167,6 +168,7 @@ a.contact::after {
 
 .links2 {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 60px;
 }
@@ -401,9 +403,175 @@ form > button:hover {
     visibility: hidden;
 }
 
+@media only screen and (max-width: 400px) {
+    section {
+        display: block;
+        max-width: 90vh;
+    }
+
+    .links {
+        display: grid;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .links p {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .links2 {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .links2 h1 {
+        font-size: 30px;
+    }
+
+    .my-img {
+        background-color: #cfcfcf;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 1px 0px;
+        width: 200px;
+        height: 300px;
+        background: url('../imagens/IMG_20230916_084019_790\ 1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-bottom: 40px;
+    }
+
+    .bloco1 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: none;
+    }
+
+    .apresen {
+        display: flex;
+        text-align: center;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        align-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apresen h1 {
+        text-align: center;
+        font-size: 40px;
+        width: 240px;
+        line-height: 40px;
+    }
+    
+    .apresen p {
+        text-align: center;
+        font-size: 12px;
+        max-width: 70%;
+        margin-bottom: 60px;
+        line-height: 20px;
+    }
+
+    .projetos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        align-items: center;
+        justify-content: space-evenly;
+        align-content: center;
+        justify-items: center;
+    }
+
+    .bloco2 {
+        display: block;
+    }
+
+    .linguagens {
+        align-items: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .linguagens > div{
+        font-size: 40px;
+        font-weight: 500;
+        padding: 10px; /* Espaçamento interno */
+    }
+
+    .poj {
+        background-color: rgba(169, 169, 169, 0);
+        max-width: 60%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden; /* Adicionado para cortar a borda ao escalar */
+        transition: background-color 0.3s; /* Adicionado para uma transição suave de cor */
+    }
+    
+    .poj img {
+        max-width: 100%;
+        height: 250px;
+    }
+    
+    .poj h3 {
+        padding-left: 10px;
+        font-size: 22px;
+        margin-bottom: 10px;
+    
+    }
+
+    #main_footer {
+        display: grid;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    footer {
+        display: flex;
+        padding-bottom: 90px;
+        background-color: #242424;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contato {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        margin-right: 0px;
+    }
+    
+    .contato h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    .contato p {
+        width: 300px;
+        font-size: 12px;
+        margin-bottom: 90px;
+        line-height: 25px;
+        text-align: center;
+    }
+    
+    #main_footer > form {
+        margin-left: 0px;
+    }
+
+}
+
 /* Para telas menores que 768px (exemplo: smartphones) */
 
-@media only screen and (max-width: 760px) {
+@media only screen and (min-width: 401px) and (max-width: 780px) {
     
     section {
         display: grid;

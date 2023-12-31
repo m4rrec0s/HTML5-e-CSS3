@@ -3,6 +3,29 @@ window.sr = ScrollReveal({ reset : true });
 sr.reveal('.bloco1', {distance: '50px', duration: 1000});
 sr.reveal('.bloco2', {distance: '50px', duration: 1500});
 sr.reveal('.bloco3', {distance: '50px', duration: 1000});
-sr.reveal('.poj', {distance: '50px', interval: 10, reset: true, duration: 2000});
+sr.reveal('.poj', {distance: '50px', interval: 30, reset: true, duration: 2000});
 sr.reveal('footer', {distance: '50px', duration: 1500});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtenha uma NodeList de botões com a classe .contact
+    var btnsScrollToContato = document.querySelectorAll('.contact');
+    var secaoContato = document.querySelector('#main_footer');
+
+    function easeInOutExpo(x) {
+        return x === 0 ? 0 : x === 1 ? 1 : x < 0.5 ? Math.pow(2, 20 * x - 10) / 2 : (2 - Math.pow(2, -20 * x + 10)) / 2;
+    }
+
+    // Itere sobre os botões e adicione um ouvinte de evento a cada um
+    btnsScrollToContato.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            // Rolar suavemente até a seção de contato com uma função de temporização personalizada
+            secaoContato.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'start',
+                easing: easeInOutExpo
+            });
+        });
+    });
+});
 
