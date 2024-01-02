@@ -29,3 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const animatedInputs = document.querySelectorAll(".animated-input input, .animated-input textarea");
+
+    animatedInputs.forEach(function (input) {
+        input.addEventListener("input", function () {
+            if (input.value.trim() !== "") {
+                input.classList.add("filled");
+            } else {
+                input.classList.remove("filled");
+            }
+        });
+    });
+});

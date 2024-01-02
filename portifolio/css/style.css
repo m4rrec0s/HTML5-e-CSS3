@@ -349,6 +349,24 @@ input:focus + label {
     font-size: 10px;
 }
 
+.animated-input label {
+    transition: 0.3s;
+}
+
+.animated-input input:focus + label,
+.animated-input textarea:focus + label,
+.animated-input input.filled + label,
+.animated-input textarea.filled + label {
+    bottom: 35px;
+    font-size: 10px;
+}
+
+.animated-input textarea.filled + label#msg-label {
+    bottom: 95px;
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 form > button {
     position: relative;

@@ -109,20 +109,26 @@
                 <h1>Contact</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil qui, vitae dicta recusandae ullam labore, ipsum nam quaerat porro delectus illum quis quam.</p>
             </div>
-            <form>
-                <div class="input-container">
-                    <input type="text" id="nome" required>
+            <form action="https://formsubmit.co/marcos_rique@outlook.com" method="POST">
+                <div class="input-container animated-input">
+                    <input name="Nome" type="text" id="nome" required>
                     <label for="nome">NAME</label>
                 </div>
-                <div class="input-container">
-                    <input type="email" id="email" required>
+                <div class="input-container animated-input">
+                    <input name="Email" type="email" id="email" required>
                     <label for="email">EMAIL</label>
                 </div>
-                <div class="input-container textarea-container">
-                    <textarea id="msg" rows="4" required></textarea>
+                <div class="input-container textarea-container animated-input">
+                    <textarea name="Mensagem" id="msg" rows="4" required></textarea>
                     <label for="msg" id="msg-label">MESSAGE</label>
                 </div>
-                <button type="submit" onclick="enviarMensagem()" class="contact">SEND MESSAGE</button>
+                <button type="submit" class="contact">SEND MESSAGE</button>
+
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Novo envio!">
+                <!-- uma resposta instantânea aos seus usuários com uma cópia do envio. Adicione uma mensagem personalizada ao corpo do email -->
+                <input type="hidden" name="_autoresponse" value="Obrigado por ter entrado em contato comigo. Já estou analizando sua mensagem e logo logo entro em contato com você!">
+                <input type="hidden" name="_next" value="obrigado.html">
             </form>
         </div>
     </footer>
