@@ -42,3 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+const $toggleTheme = document.getElementById('toggle-theme');
+const $html = document.querySelector('html');
+
+    $toggleTheme.addEventListener('change', function() {
+        $html.classList.toggle('light_mode');
+});

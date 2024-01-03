@@ -10,32 +10,52 @@
 }
 
 :root {
-    /* cores */
-    --preto: #151515;
-    --branco: #FBFBFB;
-    --verde: #4de29f;
+    /* cores: dark theme*/
+    --fundo-body: #151515;
+    --section-color: #1d1d1d6d;
+    --cor-fontes: #FBFBFB;
+    --cor-fontes-footer: #FBFBFB;
+    --destaque: #4de29f;
+    --cor-hover: #4c4c4c;
+
     /* fontes */
-    --fonte: 'Poppins', sans-serif;;
+    --fonte: 'Poppins', sans-serif;
+}
+
+.light_mode:root {
+    /* cores: light theme */
+    --fundo-body: #e1e1e1;
+    --section-color: #c1bfbf;
+    --cor-fontes: #101010;
+    --cor-fontes-footer: #FBFBFB;
+    --destaque: #4db5e2;
+    --cor-hover: #828282;
+
+    /* fontes */
+    --fonte: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: var(--preto);
+    background-color: var(--fundo-body);
     font-family: var(--fonte);
-    color: var(--branco);
+    color: var(--cor-fontes);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: all 1s ease-in-out;
 }
 
 
 section {
-    margin-top: 20px;
+    background-color: var(--section-color);
     width: 100%;
     max-width: 850px;
     height: 100%;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
+    transition: all 1s ease-in-out;
+
 }
 
 .bloco1 {
@@ -43,10 +63,19 @@ section {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
+    margin-top: 30px;
     border-radius: 10px;
     padding-bottom: 70px;
     margin-bottom: 40px;
     padding: 20px;
+}
+
+.theme {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: var(--cor-hover);
+    width: 60px;
 }
 
 .links {
@@ -61,7 +90,7 @@ section {
 }
 
 .links > div > a {
-    color: var(--branco);
+    color: var(--cor-fontes-footer);
     font-size: 20px;
     margin-right: 20px;
     padding: 2px;
@@ -69,7 +98,7 @@ section {
 }
 
 .links > div > a:hover {
-    color: var(--verde);
+    color: var(--destaque);
 }
 
 .apresen h1 {
@@ -80,7 +109,7 @@ section {
 }
 
 .apresen h1 > strong {
-    text-decoration: underline var(--verde) 4px;
+    text-decoration: underline var(--destaque) 4px;
 }
 
 .apresen p {
@@ -94,11 +123,15 @@ button.contact {
     position: relative;
     margin-top: 20px;
     background-color: transparent;
-    color: var(--branco);
+    color: var(--cor-fontes);
     border: none;
     overflow: hidden;
     display: inline-block;
     padding-bottom: 3px;
+}
+
+button.footer-button {
+    color: var(--cor-fontes-footer);
 }
 
 button.contact::before {
@@ -108,14 +141,14 @@ button.contact::before {
     height: 4px; /* Altura da linha */
     bottom: 0;
     left: 0;
-    background: linear-gradient(to right, #4de29f 0%, #4de29f 50%, transparent 50%, transparent 100%);
+    background: linear-gradient(to right, var(--destaque) 0%, var(--destaque) 50%, transparent 50%, transparent 100%);
     background-size: 200% 100%;
     transition: height 0.5s ease-in-out, background-position 1s ease-in-out, background-color 1s ease-in-out;
 }
 
 button.contact:hover::before {
     height: 100%; /* Altura final de 4px */
-    background-color: var(--verde);
+    background-color: var(--destaque);
     font-weight: 700;
     z-index: -1;
 }
@@ -127,12 +160,12 @@ button.contact::after {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: var(--verde);
+    background-color: var(--destaque);
 }
 
 
 .linha {
-    background-color: var(--branco);
+    background-color: var(--cor-fontes);
     height: 1px;
     margin-top: 90px;
     margin-bottom: 90px;
@@ -180,20 +213,21 @@ button.contact::after {
 
 .projetos {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(2, 1fr); /* Cria 3 colunas iguais */
     gap: 5px; /* Espaçamento entre as colunas */
 }
 
 .projetos a {
     display: inline-block;
-    color: var(--branco);
+    color: var(--cor-fontes);
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
 }
 
 .projetos a:hover {
     background-color: transparent;
-    color: #4de29f; /* Nova cor ao passar o mouse */
+    color: var(--destaque); /* Nova cor ao passar o mouse */
     transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
 }
 
@@ -208,13 +242,12 @@ button.contact::after {
 }
 
 .poj {
-    background-color: rgba(169, 169, 169, 0);
-    width: 415px;
+    width: 400px;
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
     transition: background-color 0.3s, transform 0.3s; /* Adicionado para uma transição suave de cor */
-    margin: 0 10px 10px 0;
+    margin: 0 0px 10px 7px;
 }
 
 .poj img {
@@ -230,7 +263,7 @@ button.contact::after {
 }
 
 .poj:hover {
-    background-color: #4c4c4c;
+    background-color: var(--cor-hover);
     transform: scale(1.05);
 }
 
@@ -256,6 +289,7 @@ footer {
 
 .contato {
     margin-right: 70px;
+    color: var(--cor-fontes-footer);
 }
 
 .contato h1 {
@@ -284,12 +318,12 @@ form {
     margin-bottom: 20px;
 }
 
-input, textarea {
-    color: var(--branco);
+#main_footer > form input, textarea {
+    color: var(--cor-fontes-footer);
     width: 300px;
     padding: 10px;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--cor-fontes-footer);
     outline: none;
     background-color: transparent;
     box-sizing: border-box;
@@ -308,6 +342,10 @@ textarea {
     font-size: 12px;
 }
 
+textarea:focus {
+    font-size: 16px;
+}
+
 textarea:valid {
     height: 100%; /* Altura automática quando há texto dentro */
 }
@@ -316,7 +354,7 @@ label {
     position: absolute;
     bottom: 5px;
     left: 10px;
-    color: var(--branco);
+    color: var(--cor-fontes-footer);
     font-size: 12px;
     pointer-events: none;
     transition: 0.3s;
@@ -327,8 +365,8 @@ label {
     bottom: 15px;
 }
 
-.textarea-container textarea:focus, input:focus {
-    border-bottom: 1px solid #4de29f; /* Adiciona destaque ao focar */
+#main_footer > form .input-container input:focus, .textarea-container textarea:focus{
+    border-bottom: 1px solid var(--destaque); /* Adiciona destaque ao focar */
 }
 
 .textarea-container textarea:focus {
@@ -372,7 +410,7 @@ form > button {
     position: relative;
     margin-top: 20px;
     background-color: transparent;
-    color: var(--branco);
+    color: var(--cor-fontes-footer);
     border: none;
     overflow: hidden;
     display: inline-block;
@@ -386,7 +424,7 @@ form > button::before {
     height: 4px; /* Altura da linha */
     bottom: 0;
     left: 0;
-    background: linear-gradient(to right, #4de29f 0%, #4de29f 50%, transparent 50%, transparent 100%);
+    background: linear-gradient(to right, var(--destaque) 0%, var(--destaque) 50%, transparent 50%, transparent 100%);
     background-size: 200% 100%;
     transition: background-position 0.5s ease-in-out, background-color 0.5s ease-in-out;
     animation: moveBackground 2s linear infinite; /* Adiciona uma animação ao fundo */
@@ -403,7 +441,7 @@ form > button::before {
 
 form > button:hover::before {
     background-position: -100% 0;
-    background-color: #4de29f; /* Cor de fundo durante a transição */
+    background-color: var(--destaque); /* Cor de fundo durante a transição */
 }
 
 form > button:hover {
@@ -411,7 +449,7 @@ form > button:hover {
 }
 
 .linha2 {
-    background-color: var(--branco);
+    background-color: var(--cor-fontes);
     height: 1px;
     width: 100%;
 }
@@ -526,7 +564,6 @@ form > button:hover {
     }
 
     .poj {
-        background-color: rgba(169, 169, 169, 0);
         max-width: 60%;
         height: 100%;
         border-radius: 10px;
@@ -559,6 +596,7 @@ form > button:hover {
         width: 100%;
         align-items: center;
         justify-content: center;
+        color: var(--cor-fontes);
     }
 
     .contato {
@@ -676,7 +714,6 @@ form > button:hover {
     }
 
     .poj {
-        background-color: rgba(169, 169, 169, 0);
         max-width: 100%;
         height: 100%;
         border-radius: 10px;
@@ -716,6 +753,7 @@ form > button:hover {
         justify-content: center;
         text-align: center;
         margin-right: 0px;
+
     }
     
     .contato h1 {
@@ -778,7 +816,6 @@ form > button:hover {
     }
 
     .poj {
-        background-color: rgba(169, 169, 169, 0);
         width: 100%;
         height: 100%;
         border-radius: 10px;
