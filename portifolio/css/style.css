@@ -43,7 +43,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: all 1s ease-in-out;
+    transition: background-color 1s ease-in-out, color 0.3s ease-in;
 }
 
 
@@ -54,7 +54,7 @@ section {
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
-    transition: all 1s ease-in-out;
+    transition: background-color 1s ease-in-out, color 0.3s ease-in;
 
 }
 
@@ -72,6 +72,7 @@ section {
 
 .switch {
     position: fixed;
+    z-index: 9999;
     top: 10px;
     right: 10px;
     display: inline-block;
@@ -100,6 +101,7 @@ section {
   
 .switch .label .ball {
     position: absolute;
+    cursor: pointer;
     top: 50%;
     left: 10%;
     transform: translate(-10%, -50%);
@@ -131,7 +133,7 @@ section {
 }
   
 .switch .checkbox:checked + .label {
-    background-color: #2196F3;
+    background-color: var(--destaque);
 }
   
 .switch .checkbox:checked + .label .ball {
@@ -520,10 +522,16 @@ form > button:hover {
     visibility: hidden;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
     section {
         display: block;
-        max-width: 90vh;
+        max-width: 100vh;
+        padding: 10px;
     }
 
     .links {
@@ -684,11 +692,84 @@ form > button:hover {
         margin-left: 0px;
     }
 
+    .switch {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .switch .label {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--destaque);
+        border-radius: 34px;
+        transition: none;
+      }
+      
+      .switch .label .ball {
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        left: 19%;
+        transform: translate(-10%, -50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+    
+      .switch .label .fa-moon,
+      .switch .label .fa-sun {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 26px;
+        color: black;
+        transition: color 0.5s ease-in-out, z-index 0.5s ease-in-out;
+      }
+      
+      .switch .label .fa-moon {
+        left: 15px;
+        z-index: 2;
+      }
+      
+      .switch .label .fa-sun {
+        right: 12px;
+        z-index: 2;
+      }
+      
+      .switch .checkbox:checked + .label .fa-moon,
+      .switch .checkbox:not(:checked) + .label .fa-sun {
+        color: white;
+        z-index: 1;
+      }
+      
+    .switch .checkbox:checked + .label {
+        background-color: var(--destaque);
+    }
+
+    .switch .checkbox:checked + .label .ball {
+        left: calc(19% - 0px);
+    }
+
 }
 
 /* Para telas menores que 768px (exemplo: smartphones) */
 
-@media only screen and (min-width: 401px) and (max-width: 780px) {
+@media only screen and (min-width: 451px) and (max-width: 780px) {
     
     section {
         display: grid;
@@ -861,6 +942,7 @@ form > button:hover {
 
       .switch .label {
         position: absolute;
+        cursor: pointer;
         top: 0;
         left: 0;
         right: 0;
@@ -871,16 +953,16 @@ form > button:hover {
       }
       
       .switch .label .ball {
-        cursor: pointer;
         position: absolute;
+        cursor: pointer;
         top: 50%;
         left: 19%;
+        transform: translate(-10%, -50%);
         width: 40px;
         height: 40px;
         border-radius: 50%;
         background-color: white;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        transition: none;
       }
     
       .switch .label .fa-moon,
@@ -890,7 +972,7 @@ form > button:hover {
         transform: translateY(-50%);
         font-size: 26px;
         color: black;
-        transition: color 0.3s ease-in-out;
+        transition: color 0.5s ease-in-out, z-index 0.5s ease-in-out;
       }
       
       .switch .label .fa-moon {
@@ -899,7 +981,7 @@ form > button:hover {
       }
       
       .switch .label .fa-sun {
-        right: 7px;
+        right: 12px;
         z-index: 2;
       }
       
@@ -913,6 +995,9 @@ form > button:hover {
         background-color: var(--destaque);
     }
 
+    .switch .checkbox:checked + .label .ball {
+        left: calc(19% - 0px);
+    }
     /* Adicione mais ajustes conforme necessário */
 }
 
@@ -999,6 +1084,79 @@ form > button:hover {
     .input-container {
         position: relative;
         margin-bottom: 20px;
+    }
+
+    .switch {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .switch .label {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--destaque);
+        border-radius: 34px;
+        transition: none;
+      }
+      
+      .switch .label .ball {
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        left: 19%;
+        transform: translate(-10%, -50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+    
+      .switch .label .fa-moon,
+      .switch .label .fa-sun {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 26px;
+        color: black;
+        transition: color 0.5s ease-in-out, z-index 0.5s ease-in-out;
+      }
+      
+      .switch .label .fa-moon {
+        left: 15px;
+        z-index: 2;
+      }
+      
+      .switch .label .fa-sun {
+        right: 12px;
+        z-index: 2;
+      }
+      
+      .switch .checkbox:checked + .label .fa-moon,
+      .switch .checkbox:not(:checked) + .label .fa-sun {
+        color: white;
+        z-index: 1;
+      }
+      
+    .switch .checkbox:checked + .label {
+        background-color: var(--destaque);
+    }
+
+    .switch .checkbox:checked + .label .ball {
+        left: calc(19% - 0px);
     }
 
 }
