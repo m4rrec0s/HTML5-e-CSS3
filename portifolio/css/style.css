@@ -773,7 +773,7 @@ form > button:hover {
     
     section {
         display: grid;
-        max-width: 90%;
+        max-width: 100vh;
         justify-content: center;
     }
 
