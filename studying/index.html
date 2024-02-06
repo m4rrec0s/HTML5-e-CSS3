@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/8334f11366.js" crossorigin="anonymous"></script>
+        <title>Rotina de Estudos</title>
+        <style>
+        </style>
+    </head>
+    <body>
+
+        <main>
+            <h1>Rotina de Estudos</h1>
+            <div class="matter">
+                <label for="disciplina">Selecione a disciplina:</label>
+                <select id="disciplina" onchange="updateTimer()">
+                    <option value="portugues">Língua Portuguesa</option>
+                    <option value="matematica">Matemática</option>
+                    <option value="conhecimentos-bancarios">Conhecimentos Bancários</option>
+                </select>
+            </div>
+        
+            <div class="timeForDay">
+                <div>
+                    <label for="minutos">Quantidade de minutos desejados:</label>
+                    <input type="number" id="minutos" min="1" value="60">
+                </div>
+                <button type="submit" onclick="confirmDisciplina()" id="confirm">Confirmar</button>
+                <button type="submit" id="encerrarButton" onclick="stopTimer()">Encerrar</button>
+
+            </div>
+            
+            <div id="cronometro">00:00:00</div>
+
+            <div id="botoes">
+                <button id="pauseButton" type="submit" onclick="pauseResumeTimer()">Pausar</button>
+            </div>
+            
+            <div id="resumo">
+                <h2>Resumo de Estudos</h2>
+                <p id="portugues-hours">Língua Portuguesa: 0 horas</p>
+                <p id="matematica-hours">Matemática: 0 horas</p>
+                <p id="conhecimentos-bancarios-hours">Conhecimentos Bancários: 0 horas</p>
+            </div>
+        
+        </main>
+        
+        <script src="script.js"></script>
+
+    </body>
+</html>

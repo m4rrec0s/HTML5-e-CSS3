@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --back: #0D0D0D;
+    --main: #1b1b1bf1;
+    --font: #F2F2F2;
+    --primary: #F23D3D;
+    --hover: #590202;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--back) url(/background.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    max-width: 60%;
+    background-color: var(--main);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--font);
+    padding: 10px;
+    box-shadow: 0 0px 10px 5px rgba(0, 0, 0, 0.808); /* Sombra */
+}
+
+label {
+    font-size: 1.2em;
+}
+
+input, select {
+    padding: 8px;
+    background-color: #4e4e4e;
+    color: var(--font);
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+div.matter {
+    margin: 20px;
+}
+
+div.timeForDay {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.timeForDay > button {
+    margin-top: 20px;
+    display: block;
+    width: 30%;
+    padding: 10px;
+    outline: none;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-weight: 700;
+    color: var(--font);
+}
+
+div.timeForDay > button:hover {
+    background-color: var(--hover);
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+#cronometro {
+    font-size: 2em;
+    margin: 20px;
+}
+
+#resumo {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #0d0d0da6;
+    width: 100%;
+    max-width: 40%;
+}
+
+#resumo p {
+    margin-top: 10px;
+}
+
+div#botoes {
+    display: none;
+}
+
+button#pauseButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    padding: 10px;
+    outline: none;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-weight: 700;
+    color: var(--font);
+}
+
+button#pauseButton:hover {
+    background-color: var(--hover);
+}
+
+button#encerrarButton {
+    display: none;
+}
