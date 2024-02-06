@@ -21,10 +21,10 @@ body {
     flex-direction: column;
     background: var(--back) url(/background.png) no-repeat center center;
     background-size: cover;
-    height: 100vh;
 }
 
 main {
+    margin-top: 50px;
     width: 100%;
     max-width: 60%;
     background-color: var(--main);
@@ -129,4 +129,21 @@ button#pauseButton:hover {
 
 button#encerrarButton {
     display: none;
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 768px) {
+    body {
+        height: 100vh;
+    }
+
+    main {
+        margin-top: 20px;
+        max-width: 90%;
+        font-size: 0.7em;
+    }
+
+    #resumo {
+        max-width: 90%;
+    }
 }
