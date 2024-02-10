@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,900&display=swap');
+
+
+@font-face {
+    font-family: Harry-Potter;
+    src: url(Assets/fonts/HARRYP__.TTF) format(truetype);
+}
+
+:root {
+    --font-body: 'Roboto', sans-serif;
+    --font-title: Harry-Potter;
+
+    --back: #1E1E1E;
+
+    --back-header: #242424e0;
+    --movie: #4b4b4bc5;
+    --movie-hover: #666666f3;
+    --primary: rgb(99, 233, 182);
+    --secundary: rgb(191, 75, 44);
+    --text: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1.1em;
+    background: var(--back);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+header > section {
+    width: 100%;
+    height: 95vh;
+    max-width: 80%;
+    background-color: var(--back-header);
+    background: var(--back) url('./Assets/images/background-image.png') no-repeat top center;
+    background-size: cover;
+    box-shadow: 0px 100px 30px 10px black;
+}
+
+header> section > nav {
+    padding: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    background: linear-gradient(to bottom, var(--back), var(--back-header) 70%, transparent);
+}
+
+header > section > nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 0.9em;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+header > section > nav a:hover {
+    color: var(--secundary);
+    text-decoration: underline;
+    text-shadow: 1px 0 20px rgb(255, 198, 198);
+}
+
+header > section > div.content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 20px;
+    text-shadow: 0 5px 20px black;
+}
+
+header> section > div.content-text > h1 {
+    font-family: var(--font-title);
+    font-size: 80px;
+    color: rgb(235, 182, 7);
+}
+
+header> section > div.content-text > p {
+    font-family: var(--font-title);
+    color: rgb(235, 182, 7);
+    width: 300px;
+    font-size: 30px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--back);
+}
+
+main > section {
+    width: 100%;
+    background-color: black;
+}
+
+main > section#welcome {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+main > section#welcome p {
+    color: var(--text);
+    font-size: 20px;
+    width: 400px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+
+main > section > h2 {
+    color: var(--text);
+    font-size: 60px;
+    margin: 20px 0 40px 100px;
+}
+
+main > section > div.movies-content {
+    width: 100%;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+main > section > div.movies-content > div.movie {
+    height: 385px;
+    width: 196px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--movie);
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+main > section > div.movies-content > div.movie:hover {
+    background-color: var(--movie-hover);
+    transform: scale(1.08);
+}
+
+main > section > div.movies-content > div.movie p {
+    margin-top: 10px;
+    color: var(--text);
+}
+
+section#section-hogwarts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#section-hogwarts h2 {
+    text-align: left;
+}
+
+div.hogwarts-content {
+    width: 80%;
+    background: linear-gradient(to bottom, black, var(--back) 40%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.hogwarts-content img {
+    width: 60%;
+    height: 90%;
+    border-radius: 5%;
+}
+
+div.hogwarts-content p {
+    color: var(--text);
+    margin: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+section#section-characters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+section#section-characters img {
+    width: 300px;
+    height: 100%;
+}
+
+section#section-characters h2 {
+    width: 100%;
+    margin: 20px 0 20px 0;
+    padding-left: 100px;
+}
+
+.character {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 80%;
+    height: 70vh;
+    background: linear-gradient(45deg, transparent 10%, rgb(255, 196, 0) 50%, rgb(138, 94, 0), black 90%);
+}
+
+.character .text-character {
+    text-align: right;
+    width: 100%;
+    max-width: 50%;
+    color: var(--text);
+    margin: 20px;
+}
+
+.character .text-character h3 {
+    font-size: 50px;
+    text-shadow: 0 0 4px black;
+}
+
+.character .text-character p {
+    text-shadow: 0 0 4px black;
+}
+
+.gryffindor {
+    background: linear-gradient(45deg, transparent 10%, var(--secundary) 50%, rgb(138, 30, 0), black 90%);
+}
+
+.soncerine {
+    background: linear-gradient(-45deg, transparent 10%, var(--primary) 50%, rgb(0, 148, 91), black 90%);
+}
+
+.ravenclaw {
+    background: linear-gradient(-45deg, transparent 10%, #267cab 50%, #0c5175, black 90%);
+}
+
+.hufflepuff {
+    background: linear-gradient(45deg, transparent 10%, rgb(255, 196, 0) 50%, rgb(138, 94, 0), black 90%);
+}
+
+.left .text-character{
+    text-align: left;
+}
+
+section#houses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+section#houses h2 {
+    width: 100%;
+    margin: 20px 0 20px 0;
+    padding-left: 100px;
+}
+
+.container-houses{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 80%;
+    height: 70vh;
+}
+
+.emblem-houses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 80%;
+    height: 70vh;
+}
+
+.emblem-houses img {
+    width: 300px;
+}
+
+.container-houses img {
+    width: 300px;
+}
+
+.container-houses > .text-house {
+    text-align: right;
+    width: 100%;
+    max-width: 50%;
+    color: var(--text);
+    margin: 20px;
+}
+
+.container-houses > .text-house  h3 {
+    font-size: 50px;
+    text-shadow: 0 0 4px black;
+}
+
+.container-houses > .text-house  p {
+    text-shadow: 0 0 4px black;
+}
+
+footer {
+    background: linear-gradient(to bottom, black 50%, transparent);
+    padding: 40px;
+}
+
+footer p {
+    text-align: center;
+    color: var(--text);
+    opacity: 80%;
+}
