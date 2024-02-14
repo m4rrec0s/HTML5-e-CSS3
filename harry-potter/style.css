@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,900&display=swap');
 
-
 @font-face {
     font-family: Harry-Potter;
     src: url(Assets/fonts/HARRYP__.TTF) format(truetype);
@@ -49,7 +48,7 @@ header > section {
     box-shadow: 0px 100px 30px 10px black;
 }
 
-header> section > nav {
+header > section > nav {
     padding: 20px;
     margin-bottom: 100px;
     display: flex;
@@ -83,13 +82,13 @@ header > section > div.content-text {
     text-shadow: 0 5px 20px black;
 }
 
-header> section > div.content-text > h1 {
+header > section > div.content-text > h1 {
     font-family: var(--font-title);
     font-size: 80px;
     color: rgb(235, 182, 7);
 }
 
-header> section > div.content-text > p {
+header > section > div.content-text > p {
     font-family: var(--font-title);
     color: rgb(235, 182, 7);
     width: 300px;
@@ -117,6 +116,7 @@ main > section#welcome {
     align-items: center;
     justify-content: center;
     text-align: center;
+    background: linear-gradient(to bottom, black, transparent);
 }
 
 main > section#welcome p {
@@ -126,6 +126,7 @@ main > section#welcome p {
     margin-top: 30px;
     margin-bottom: 10px;
     padding: 10px;
+    text-shadow: 0 5px 20px black;
 }
 
 
@@ -210,8 +211,9 @@ section#section-characters {
 }
 
 section#section-characters img {
-    width: 300px;
-    height: 100%;
+    width: 100%; 
+    max-width: 300px; 
+    height: auto;
 }
 
 section#section-characters h2 {
@@ -251,7 +253,7 @@ section#section-characters h2 {
     background: linear-gradient(45deg, transparent 10%, var(--secundary) 50%, rgb(138, 30, 0), black 90%);
 }
 
-.soncerine {
+.slytherin {
     background: linear-gradient(-45deg, transparent 10%, var(--primary) 50%, rgb(0, 148, 91), black 90%);
 }
 
@@ -263,7 +265,7 @@ section#section-characters h2 {
     background: linear-gradient(45deg, transparent 10%, rgb(255, 196, 0) 50%, rgb(138, 94, 0), black 90%);
 }
 
-.left .text-character{
+.left .text-character {
     text-align: left;
 }
 
@@ -280,7 +282,7 @@ section#houses h2 {
     padding-left: 100px;
 }
 
-.container-houses{
+.container-houses {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -314,12 +316,12 @@ section#houses h2 {
     margin: 20px;
 }
 
-.container-houses > .text-house  h3 {
+.container-houses > .text-house h3 {
     font-size: 50px;
     text-shadow: 0 0 4px black;
 }
 
-.container-houses > .text-house  p {
+.container-houses > .text-house p {
     text-shadow: 0 0 4px black;
 }
 
@@ -332,4 +334,85 @@ footer p {
     text-align: center;
     color: var(--text);
     opacity: 80%;
+}
+
+/* Media Queries para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    header > section {
+        max-width: 100%;
+    }
+
+    header > section > div.content-text {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header > section > div.content-text > h1 {
+        font-size: 80px;
+    }
+
+    header > section > div.content-text > p {
+        font-size: 30px;
+        width: 80%;
+    }
+
+    main > section > h2 {
+        font-size: 40px;
+        margin: 20px 0 20px 0;
+        padding-left: 30px;
+    }
+
+    section#section-hogwarts h2 {
+        padding-left: 30px;
+    }
+
+    main > section > div.movies-content > div.movie {
+        width: 150px;
+        height: 100%;
+    }
+
+    main > section > div.movies-content > div.movie p {
+        font-size: 14px;
+    }
+
+    section#section-characters {
+        max-width: 100%;
+    }
+
+    section#section-characters h2 {
+        font-size: 30px;
+        padding-left: 30px;
+    }
+
+    section#section-characters img {
+        width: 80%;
+        max-width: 200px;
+    }
+
+    .character .text-character h3 {
+        font-size: 30px;
+    }
+
+    .character .text-character p {
+        font-size: 14px;
+    }
+
+    section#houses h2 {
+        font-size: 30px;
+    }
+
+    .container-houses img,
+    .emblem-houses img {
+        width: 200px;
+    }
+
+    .container-houses > .text-house h3 {
+        font-size: 30px;
+    }
+
+    .container-houses > .text-house p {
+        font-size: 14px;
+    }
 }
