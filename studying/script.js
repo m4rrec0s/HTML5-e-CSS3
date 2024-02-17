@@ -4,7 +4,7 @@ let totalHours = {
     matematica: 0,
     'conhecimentos-bancarios': 0
 };
-let initialSeconds;  // Adicionamos uma variável para armazenar os segundos iniciais
+let initialSeconds; 
 
 function confirmDisciplina() {
     const selectedDisciplina = document.getElementById('disciplina').value;
@@ -39,8 +39,7 @@ function startTimer(selectedDisciplina, segundosDesejados) {
 
     let seconds = segundosDesejados;
 
-    initialSeconds = segundosDesejados;  // Modificamos o valor global
-
+    initialSeconds = segundosDesejados;
     timer = setInterval(function () {
         seconds--;
 
@@ -52,7 +51,7 @@ function startTimer(selectedDisciplina, segundosDesejados) {
             const minutes = Math.floor((seconds % 3600) / 60);
             const remainingSeconds = seconds % 60;
 
-            // Limitando a exibição a 8 caracteres
+            
             cronometroElement.textContent = `${pad(hours)}:${pad(minutes)}:${pad(remainingSeconds)}`.substring(0, 8);
         }
     }, 1000);
@@ -81,7 +80,7 @@ function startTimer(selectedDisciplina, segundosDesejados) {
         pauseButton.appendChild(continueButtonIcon);
 
         pauseButton.onclick = function () {
-            startTimer(selectedDisciplina, seconds);  // Utilizamos a variável local
+            startTimer(selectedDisciplina, seconds); 
         };
     };
 
@@ -93,7 +92,7 @@ function startTimer(selectedDisciplina, segundosDesejados) {
 }
 
 document.getElementById('simulado').addEventListener('click', function() {
-    startTimer('simulado', 4 * 60 * 60); // 4 horas em segundos
+    startTimer('simulado', 4 * 60 * 60); 
 });
 
 function stopTimer() {
@@ -109,11 +108,10 @@ function stopTimer() {
     const selectedDisciplina = document.getElementById('disciplina').value;
     const minutosDesejados = parseInt(document.getElementById('minutos').value, 10);
 
-    const tempoTotal = initialSeconds / 60 - timer / 60;  // Calcula o tempo total
+    const tempoTotal = initialSeconds / 60 - timer / 60;  
     totalHours[selectedDisciplina] += tempoTotal / 60;
     document.getElementById(`${selectedDisciplina}-hours`).textContent = `${selectedDisciplina.charAt(0).toUpperCase() + selectedDisciplina.slice(1)}: ${totalHours[selectedDisciplina].toFixed(2)} horas`;
 
-    // Resetar o cronômetro para 00:00:00
     document.getElementById('cronometro').textContent = '00:00:00';
 }
 
