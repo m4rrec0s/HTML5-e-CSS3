@@ -28,6 +28,7 @@ function confirmDisciplina() {
     }
 }
 
+
 function startTimer(selectedDisciplina, segundosDesejados) {
     if (timer) {
         clearInterval(timer);
@@ -91,6 +92,9 @@ function startTimer(selectedDisciplina, segundosDesejados) {
     });
 }
 
+document.getElementById('simulado').addEventListener('click', function() {
+    startTimer('simulado', 4 * 60 * 60); // 4 horas em segundos
+});
 
 function stopTimer() {
     clearInterval(timer);

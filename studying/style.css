@@ -19,12 +19,12 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: var(--back) url(/background.png) no-repeat center center;
+    background: var(--back) url(/image/background.png) no-repeat center center;
     background-size: cover;
+    height: 100vh;
 }
 
 main {
-    margin-top: 50px;
     width: 100%;
     max-width: 60%;
     background-color: var(--main);
