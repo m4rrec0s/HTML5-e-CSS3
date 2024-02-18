@@ -342,6 +342,15 @@ footer p {
         max-width: 100%;
     }
 
+    header > section > nav a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 0.6em;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+    }
+
     header > section > div.content-text {
         display: flex;
         text-align: center;
@@ -378,7 +387,9 @@ footer p {
     }
 
     section#section-characters {
+        width: 100%;
         max-width: 100%;
+        gap: 0;
     }
 
     section#section-characters h2 {
@@ -389,6 +400,17 @@ footer p {
     section#section-characters img {
         width: 80%;
         max-width: 200px;
+    }
+
+    .character {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        background: linear-gradient(90deg, transparent 10%, rgb(255, 196, 0) 50%, rgb(138, 94, 0), black 90%);
     }
 
     .character .text-character h3 {
@@ -405,7 +427,7 @@ footer p {
 
     .container-houses img,
     .emblem-houses img {
-        width: 200px;
+        width: 100px;
     }
 
     .container-houses > .text-house h3 {
@@ -415,4 +437,38 @@ footer p {
     .container-houses > .text-house p {
         font-size: 14px;
     }
+
+    .gryffindor {
+        background: linear-gradient(90deg, transparent 10%, var(--secundary) 50%, rgb(138, 30, 0), black 90%);
+    }
+    
+    .slytherin {
+        background: linear-gradient(-90deg, transparent 10%, var(--primary) 50%, rgb(0, 148, 91), black 90%);
+    }
+    
+    .ravenclaw {
+        background: linear-gradient(-90deg, transparent 10%, #267cab 50%, #0c5175, black 90%);
+    }
+    
+    .hufflepuff {
+        background: linear-gradient(90deg, transparent 10%, rgb(255, 196, 0) 50%, rgb(138, 94, 0), black 90%);
+    }
+
+    section#houses {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    
+    .container-houses {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+
 }
