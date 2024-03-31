@@ -281,27 +281,26 @@ button.contact::after {
     gap: 5px; /* Espaçamento entre as colunas */
 }
 
-.projetos a {
+.projetos > .poj > a {
     display: inline-block;
     color: var(--cor-fontes);
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
 }
 
-.projetos a:hover {
-    background-color: transparent;
-    color: var(--destaque); /* Nova cor ao passar o mouse */
-    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+.poj a:hover {
+    background-color: var(--cor-hover);
+    color: var(--destaque);
 }
 
 .lingua {
     display: flex;
+    padding-bottom: 5px;
 }
 
 .lingua p {
     margin-left: 10px;
     font-size: 14px;
-    padding-bottom: 5px;
 }
 
 .poj {
@@ -309,13 +308,40 @@ button.contact::after {
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
-    transition: background-color 0.3s, transform 0.3s; /* Adicionado para uma transição suave de cor */
-    margin: 0 0px 10px 7px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 0px 15px 7px;
 }
 
-.poj img {
+.proje {
     width: 415px;
     height: 300px;
+    background: #828282;
+    margin-bottom: 5px;
+}
+
+#c1 {
+    background: url('../imagens/desktop-completed.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+#c2 {
+    background: url('../imagens/study.png') no-repeat center center;
+    background-size: cover;
+}
+
+#c3 {
+    background: url('../imagens/login.png') no-repeat center center;
+    background-size: cover;
+}
+
+#c4 {
+    background: url('../imagens/calculadora-win11.png') no-repeat center center;
+    background-size: cover;
+}
+
+#c5 {
+    background: #070707 url('../imagens/spotify.png') no-repeat right center;
+    background-size: 160%;
 }
 
 .poj h3 {
@@ -325,10 +351,7 @@ button.contact::after {
 
 }
 
-.poj:hover {
-    background-color: var(--cor-hover);
-    transform: scale(1.05);
-}
+
 
 footer {
     display: flex;
@@ -399,8 +422,8 @@ form {
 
 textarea {
     margin-top: 20px;
-    height: 50px; /* Altura inicial desejada */
-    resize: none; /* Impede redimensionamento manual do textarea */
+    height: 50px; 
+    resize: none; 
     font-family: var(--fonte);
     font-size: 12px;
 }
@@ -410,7 +433,7 @@ textarea:focus {
 }
 
 textarea:valid {
-    height: 100%; /* Altura automática quando há texto dentro */
+    height: 100%;
 }
 
 label {
@@ -429,11 +452,11 @@ label {
 }
 
 #main_footer > form .input-container input:focus, .textarea-container textarea:focus{
-    border-bottom: 1px solid var(--destaque); /* Adiciona destaque ao focar */
+    border-bottom: 1px solid var(--destaque);
 }
 
 .textarea-container textarea:focus {
-    height: 90px; /* Altura aumentada ao focar */
+    height: 90px;
     font-size: 10px;
     font-family: var(--fonte);
 }
@@ -478,19 +501,20 @@ form > button {
     overflow: hidden;
     display: inline-block;
     padding-bottom: 3px;
+    cursor: pointer;
 }
 
 form > button::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 4px; /* Altura da linha */
+    height: 4px;
     bottom: 0;
     left: 0;
     background: linear-gradient(to right, var(--destaque) 0%, var(--destaque) 50%, transparent 50%, transparent 100%);
     background-size: 200% 100%;
     transition: background-position 0.5s ease-in-out, background-color 0.5s ease-in-out;
-    animation: moveBackground 2s linear infinite; /* Adiciona uma animação ao fundo */
+    animation: moveBackground 2s linear infinite;
 }
 
 @keyframes moveBackground {
@@ -504,11 +528,11 @@ form > button::before {
 
 form > button:hover::before {
     background-position: -100% 0;
-    background-color: var(--destaque); /* Cor de fundo durante a transição */
+    background-color: var(--destaque);
 }
 
 form > button:hover {
-    text-decoration: none; /* Remover sublinhado ao passar o mouse */
+    text-decoration: none;
 }
 
 .linha2 {
