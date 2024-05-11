@@ -12,7 +12,7 @@
 :root {
     /* cores: dark theme*/
     --fundo-body: #151515;
-    --section-color: #1d1d1d6d;
+    --section-color: #1d1d1d;
     --cor-fontes: #FBFBFB;
     --cor-fontes-footer: #FBFBFB;
     --destaque: #4de29f;
@@ -55,7 +55,38 @@ section {
     padding: 20px;
     box-sizing: border-box;
     transition: background-color 1s ease-in-out, color 0.3s ease-in;
+    z-index: 5;
+}
 
+h1 {
+    font-size: 50px;
+    width: 600px;
+    line-height: 55px;
+    margin-bottom: 20px;
+}
+
+.fa-code {
+    position: absolute;
+    top: 40%;
+    right: 16%;
+    font-size: 200px;
+    color: var(--cor-hover);
+}
+
+.fa-gamepad {
+    position: absolute;
+    top: 120%;
+    left: 15%;
+    font-size: 200px;
+    color: var(--cor-hover);
+}
+
+.fa-flask {
+    position: absolute;
+    top: 200%;
+    right: 21%;
+    font-size: 160px;
+    color: var(--cor-hover);
 }
 
 .bloco1 {
@@ -80,13 +111,13 @@ section {
     height: 34px;
     margin: 10px;
 }
-  
+
 .switch .checkbox {
     opacity: 0;
     width: 60px;
     height: 34px;
 }
-  
+
 .switch .label {
     position: absolute;
     cursor: pointer;
@@ -98,7 +129,7 @@ section {
     border-radius: 34px;
     transition: background-color 0.4s;
 }
-  
+
 .switch .label .ball {
     position: absolute;
     cursor: pointer;
@@ -115,35 +146,36 @@ section {
 
 .switch .label .fa-moon,
 .switch .label .fa-sun {
-  font-size: 16px;
+    font-size: 16px;
 }
-  
+
 .switch .label .fa-moon {
     position: absolute;
     left: 7px;
     top: 50%;
     transform: translateY(-50%);
 }
-  
+
 .switch .label .fa-sun {
     position: absolute;
     right: 7px;
     top: 50%;
     transform: translateY(-50%);
 }
-  
-.switch .checkbox:checked + .label {
+
+.switch .checkbox:checked+.label {
     background-color: var(--destaque);
 }
-  
-.switch .checkbox:checked + .label .ball {
+
+.switch .checkbox:checked+.label .ball {
     left: calc(100% - 32px);
 }
-  
+
 
 .links {
     display: flex;
-    justify-content: space-between; /* Alinha os itens à esquerda e à direita */
+    justify-content: space-between;
+    /* Alinha os itens à esquerda e à direita */
     margin-bottom: 80px;
 }
 
@@ -152,7 +184,7 @@ section {
     font-weight: 700;
 }
 
-.links > div > a {
+.links>div>a {
     color: var(--cor-fontes-footer);
     font-size: 20px;
     margin-right: 20px;
@@ -160,7 +192,7 @@ section {
     transition: color 0.3s ease-in-out;
 }
 
-.links > div > a:hover {
+.links>div>a:hover {
     color: var(--destaque);
 }
 
@@ -171,7 +203,7 @@ section {
     margin-bottom: 20px;
 }
 
-.apresen h1 > strong {
+.apresen h1>strong {
     text-decoration: underline var(--destaque) 4px;
 }
 
@@ -201,7 +233,8 @@ button.contact::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 4px; /* Altura da linha */
+    height: 4px;
+    /* Altura da linha */
     bottom: 0;
     left: 0;
     background: linear-gradient(to right, var(--destaque) 0%, var(--destaque) 50%, transparent 50%, transparent 100%);
@@ -210,7 +243,8 @@ button.contact::before {
 }
 
 button.contact:hover::before {
-    height: 100%; /* Altura final de 4px */
+    height: 100%;
+    /* Altura final de 4px */
     background-color: var(--destaque);
     font-weight: 700;
     z-index: -1;
@@ -236,24 +270,28 @@ button.contact::after {
 
 .bloco2 {
     display: flex;
-    margin-bottom: 90px;
+    margin: 90px 0px;
     justify-content: center;
 }
 
 .linguagens {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas iguais */
-    gap: 20px; /* Espaçamento entre as colunas */
+    grid-template-columns: repeat(3, 1fr);
+    /* Cria 3 colunas iguais */
+    gap: 20px;
+    /* Espaçamento entre as colunas */
 }
 
-.linguagens > div{
+.linguagens>div {
     font-size: 40px;
     font-weight: 500;
-    flex-basis: 30%; /* Define a largura de cada coluna */
-    padding: 10px; /* Espaçamento interno */
+    flex-basis: 30%;
+    /* Define a largura de cada coluna */
+    padding: 10px;
+    /* Espaçamento interno */
 }
 
-.linguagens > div > p {
+.linguagens>div>p {
     font-size: 12px;
     font-weight: 400;
 }
@@ -277,11 +315,13 @@ button.contact::after {
 .projetos {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 1fr); /* Cria 3 colunas iguais */
-    gap: 5px; /* Espaçamento entre as colunas */
+    grid-template-columns: repeat(2, 1fr);
+    /* Cria 3 colunas iguais */
+    gap: 5px;
+    /* Espaçamento entre as colunas */
 }
 
-.projetos > .poj > a {
+.projetos>.poj>a {
     display: inline-block;
     color: var(--cor-fontes);
     text-decoration: none;
@@ -363,7 +403,7 @@ footer {
 }
 
 #both {
-    clear:both;
+    clear: both;
     max-width: 850px;
 }
 
@@ -389,7 +429,7 @@ footer {
     line-height: 25px;
 }
 
-#main_footer > form {
+#main_footer>form {
     margin-left: 40px;
 }
 
@@ -404,7 +444,8 @@ form {
     margin-bottom: 20px;
 }
 
-#main_footer > form input, textarea {
+#main_footer>form input,
+textarea {
     color: var(--cor-fontes-footer);
     width: 300px;
     padding: 10px;
@@ -422,8 +463,8 @@ form {
 
 textarea {
     margin-top: 20px;
-    height: 50px; 
-    resize: none; 
+    height: 50px;
+    resize: none;
     font-family: var(--fonte);
     font-size: 12px;
 }
@@ -451,7 +492,8 @@ label {
     bottom: 15px;
 }
 
-#main_footer > form .input-container input:focus, .textarea-container textarea:focus{
+#main_footer>form .input-container input:focus,
+.textarea-container textarea:focus {
     border-bottom: 1px solid var(--destaque);
 }
 
@@ -461,14 +503,14 @@ label {
     font-family: var(--fonte);
 }
 
-textarea:focus + label#msg-label {
+textarea:focus+label#msg-label {
     bottom: 95px;
     font-size: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-input:focus + label {
+input:focus+label {
     bottom: 35px;
     font-size: 10px;
 }
@@ -477,22 +519,22 @@ input:focus + label {
     transition: 0.3s;
 }
 
-.animated-input input:focus + label,
-.animated-input textarea:focus + label,
-.animated-input input.filled + label,
-.animated-input textarea.filled + label {
+.animated-input input:focus+label,
+.animated-input textarea:focus+label,
+.animated-input input.filled+label,
+.animated-input textarea.filled+label {
     bottom: 35px;
     font-size: 10px;
 }
 
-.animated-input textarea.filled + label#msg-label {
+.animated-input textarea.filled+label#msg-label {
     bottom: 95px;
     font-size: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-form > button {
+form>button {
     position: relative;
     margin-top: 20px;
     background-color: transparent;
@@ -504,7 +546,7 @@ form > button {
     cursor: pointer;
 }
 
-form > button::before {
+form>button::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -521,17 +563,18 @@ form > button::before {
     0% {
         background-position: 100% 0;
     }
+
     100% {
         background-position: -100% 0;
     }
 }
 
-form > button:hover::before {
+form>button:hover::before {
     background-position: -100% 0;
     background-color: var(--destaque);
 }
 
-form > button:hover {
+form>button:hover {
     text-decoration: none;
 }
 
@@ -542,7 +585,11 @@ form > button:hover {
 }
 
 
-.bloco1, .bloco2, .bloco3, .poj, footer {
+.bloco1,
+.bloco2,
+.bloco3,
+.poj,
+footer {
     visibility: hidden;
 }
 
@@ -570,12 +617,12 @@ form > button:hover {
         text-align: center;
         margin-bottom: 15px;
     }
-    
+
     .links2 {
         display: flex;
         justify-content: space-between;
     }
-    
+
     .links2 h1 {
         font-size: 30px;
     }
@@ -620,7 +667,7 @@ form > button:hover {
         width: 240px;
         line-height: 40px;
     }
-    
+
     .apresen p {
         text-align: center;
         font-size: 12px;
@@ -650,30 +697,33 @@ form > button:hover {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .linguagens > div{
+    .linguagens>div {
         font-size: 40px;
         font-weight: 500;
-        padding: 10px; /* Espaçamento interno */
+        padding: 10px;
+        /* Espaçamento interno */
     }
 
     .poj {
         max-width: 60%;
         height: 100%;
         border-radius: 10px;
-        overflow: hidden; /* Adicionado para cortar a borda ao escalar */
-        transition: background-color 0.3s; /* Adicionado para uma transição suave de cor */
+        overflow: hidden;
+        /* Adicionado para cortar a borda ao escalar */
+        transition: background-color 0.3s;
+        /* Adicionado para uma transição suave de cor */
     }
-    
+
     .poj img {
         max-width: 100%;
         height: 250px;
     }
-    
+
     .poj h3 {
         padding-left: 10px;
         font-size: 22px;
         margin-bottom: 10px;
-    
+
     }
 
     #main_footer {
@@ -698,12 +748,12 @@ form > button:hover {
         text-align: center;
         margin-right: 0px;
     }
-    
+
     .contato h1 {
         text-align: center;
         font-size: 40px;
     }
-    
+
     .contato p {
         width: 300px;
         font-size: 12px;
@@ -711,8 +761,8 @@ form > button:hover {
         line-height: 25px;
         text-align: center;
     }
-    
-    #main_footer > form {
+
+    #main_footer>form {
         margin-left: 0px;
     }
 
@@ -728,9 +778,9 @@ form > button:hover {
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         transition: all 0.3s ease-in-out;
-      }
+    }
 
-      .switch .label {
+    .switch .label {
         position: absolute;
         cursor: pointer;
         top: 0;
@@ -740,9 +790,9 @@ form > button:hover {
         background-color: var(--destaque);
         border-radius: 34px;
         transition: none;
-      }
-      
-      .switch .label .ball {
+    }
+
+    .switch .label .ball {
         position: absolute;
         cursor: pointer;
         top: 50%;
@@ -753,39 +803,39 @@ form > button:hover {
         border-radius: 50%;
         background-color: white;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-      }
-    
-      .switch .label .fa-moon,
-      .switch .label .fa-sun {
+    }
+
+    .switch .label .fa-moon,
+    .switch .label .fa-sun {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         font-size: 26px;
         color: black;
         transition: color 0.5s ease-in-out, z-index 0.5s ease-in-out;
-      }
-      
-      .switch .label .fa-moon {
+    }
+
+    .switch .label .fa-moon {
         left: 15px;
         z-index: 2;
-      }
-      
-      .switch .label .fa-sun {
+    }
+
+    .switch .label .fa-sun {
         right: 12px;
         z-index: 2;
-      }
-      
-      .switch .checkbox:checked + .label .fa-moon,
-      .switch .checkbox:not(:checked) + .label .fa-sun {
+    }
+
+    .switch .checkbox:checked+.label .fa-moon,
+    .switch .checkbox:not(:checked)+.label .fa-sun {
         color: white;
         z-index: 1;
-      }
-      
-    .switch .checkbox:checked + .label {
+    }
+
+    .switch .checkbox:checked+.label {
         background-color: var(--destaque);
     }
 
-    .switch .checkbox:checked + .label .ball {
+    .switch .checkbox:checked+.label .ball {
         left: calc(19% - 0px);
     }
 
@@ -794,7 +844,7 @@ form > button:hover {
 /* Para telas menores que 768px (exemplo: smartphones) */
 
 @media only screen and (min-width: 451px) and (max-width: 780px) {
-    
+
     section {
         display: grid;
         max-width: 100vh;
@@ -843,7 +893,7 @@ form > button:hover {
         width: 100%;
         line-height: 40px;
     }
-    
+
     .apresen p {
         text-align: center;
         font-size: 12px;
@@ -873,30 +923,33 @@ form > button:hover {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .linguagens > div{
+    .linguagens>div {
         font-size: 40px;
         font-weight: 500;
-        padding: 10px; /* Espaçamento interno */
+        padding: 10px;
+        /* Espaçamento interno */
     }
 
     .poj {
         max-width: 100%;
         height: 100%;
         border-radius: 10px;
-        overflow: hidden; /* Adicionado para cortar a borda ao escalar */
-        transition: background-color 0.3s; /* Adicionado para uma transição suave de cor */
+        overflow: hidden;
+        /* Adicionado para cortar a borda ao escalar */
+        transition: background-color 0.3s;
+        /* Adicionado para uma transição suave de cor */
     }
-    
+
     .poj img {
         max-width: 100%;
         height: 250px;
     }
-    
+
     .poj h3 {
         padding-left: 10px;
         font-size: 22px;
         margin-bottom: 10px;
-    
+
     }
 
     #main_footer {
@@ -921,12 +974,12 @@ form > button:hover {
         margin-right: 0px;
 
     }
-    
+
     .contato h1 {
         text-align: center;
         font-size: 40px;
     }
-    
+
     .contato p {
         width: 300px;
         font-size: 12px;
@@ -934,17 +987,17 @@ form > button:hover {
         line-height: 25px;
         text-align: center;
     }
-    
-    #main_footer > form {
+
+    #main_footer>form {
         margin-left: 0px;
     }
-    
+
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .input-container {
         position: relative;
         margin-bottom: 20px;
@@ -962,9 +1015,9 @@ form > button:hover {
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         transition: all 0.3s ease-in-out;
-      }
+    }
 
-      .switch .label {
+    .switch .label {
         position: absolute;
         cursor: pointer;
         top: 0;
@@ -974,9 +1027,9 @@ form > button:hover {
         background-color: var(--destaque);
         border-radius: 34px;
         transition: none;
-      }
-      
-      .switch .label .ball {
+    }
+
+    .switch .label .ball {
         position: absolute;
         cursor: pointer;
         top: 50%;
@@ -987,47 +1040,48 @@ form > button:hover {
         border-radius: 50%;
         background-color: white;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-      }
-    
-      .switch .label .fa-moon,
-      .switch .label .fa-sun {
+    }
+
+    .switch .label .fa-moon,
+    .switch .label .fa-sun {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         font-size: 26px;
         color: black;
         transition: color 0.5s ease-in-out, z-index 0.5s ease-in-out;
-      }
-      
-      .switch .label .fa-moon {
+    }
+
+    .switch .label .fa-moon {
         left: 15px;
         z-index: 2;
-      }
-      
-      .switch .label .fa-sun {
+    }
+
+    .switch .label .fa-sun {
         right: 12px;
         z-index: 2;
-      }
-      
-      .switch .checkbox:checked + .label .fa-moon,
-      .switch .checkbox:not(:checked) + .label .fa-sun {
+    }
+
+    .switch .checkbox:checked+.label .fa-moon,
+    .switch .checkbox:not(:checked)+.label .fa-sun {
         color: white;
         z-index: 1;
-      }
-      
-    .switch .checkbox:checked + .label {
+    }
+
+    .switch .checkbox:checked+.label {
         background-color: var(--destaque);
     }
 
-    .switch .checkbox:checked + .label .ball {
+    .switch .checkbox:checked+.label .ball {
         left: calc(19% - 0px);
     }
+
     /* Adicione mais ajustes conforme necessário */
 }
 
 /* Para telas entre 481px e 768px (exemplo: tablets) */
 @media only screen and (min-width: 781px) and (max-width: 888px) {
-    
+
     section {
         max-width: 90%;
     }
@@ -1037,7 +1091,7 @@ form > button:hover {
         font-size: 50px;
         line-height: 50px;
     }
-    
+
     .apresen p {
         font-size: 10px;
         width: 50%;
@@ -1047,28 +1101,32 @@ form > button:hover {
 
     .projetos {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Cria 3 colunas iguais */
-        gap: 20px; /* Espaçamento entre as colunas */
+        grid-template-columns: repeat(2, 1fr);
+        /* Cria 3 colunas iguais */
+        gap: 20px;
+        /* Espaçamento entre as colunas */
     }
 
     .poj {
         width: 100%;
         height: 100%;
         border-radius: 10px;
-        overflow: hidden; /* Adicionado para cortar a borda ao escalar */
-        transition: background-color 0.3s; /* Adicionado para uma transição suave de cor */
+        overflow: hidden;
+        /* Adicionado para cortar a borda ao escalar */
+        transition: background-color 0.3s;
+        /* Adicionado para uma transição suave de cor */
     }
-    
+
     .poj img {
         max-width: 100%;
         height: 250px;
     }
-    
+
     .poj h3 {
         padding-left: 10px;
         font-size: 22px;
         margin-bottom: 10px;
-    
+
     }
 
 
@@ -1081,12 +1139,12 @@ form > button:hover {
     .contato {
         margin-right: 0px;
     }
-    
+
     .contato h1 {
         text-align: center;
         font-size: 50px;
     }
-    
+
     .contato p {
         font-size: 12px;
         width: 400px;
@@ -1094,17 +1152,17 @@ form > button:hover {
         line-height: 25px;
         text-align: center;
     }
-    
-    #main_footer > form {
+
+    #main_footer>form {
         margin-left: 0px;
     }
-    
+
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .input-container {
         position: relative;
         margin-bottom: 20px;
@@ -1122,9 +1180,9 @@ form > button:hover {
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         transition: all 0.3s ease-in-out;
-      }
+    }
 
-      .switch .label {
+    .switch .label {
         position: absolute;
         cursor: pointer;
         top: 0;
@@ -1134,9 +1192,9 @@ form > button:hover {
         background-color: var(--destaque);
         border-radius: 34px;
         transition: none;
-      }
-      
-      .switch .label .ball {
+    }
+
+    .switch .label .ball {
         position: absolute;
         cursor: pointer;
         top: 50%;
@@ -1147,39 +1205,39 @@ form > button:hover {
         border-radius: 50%;
         background-color: white;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-      }
-    
-      .switch .label .fa-moon,
-      .switch .label .fa-sun {
+    }
+
+    .switch .label .fa-moon,
+    .switch .label .fa-sun {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         font-size: 26px;
         color: black;
         transition: color 0.5s ease-in-out, z-index 0.5s ease-in-out;
-      }
-      
-      .switch .label .fa-moon {
+    }
+
+    .switch .label .fa-moon {
         left: 15px;
         z-index: 2;
-      }
-      
-      .switch .label .fa-sun {
+    }
+
+    .switch .label .fa-sun {
         right: 12px;
         z-index: 2;
-      }
-      
-      .switch .checkbox:checked + .label .fa-moon,
-      .switch .checkbox:not(:checked) + .label .fa-sun {
+    }
+
+    .switch .checkbox:checked+.label .fa-moon,
+    .switch .checkbox:not(:checked)+.label .fa-sun {
         color: white;
         z-index: 1;
-      }
-      
-    .switch .checkbox:checked + .label {
+    }
+
+    .switch .checkbox:checked+.label {
         background-color: var(--destaque);
     }
 
-    .switch .checkbox:checked + .label .ball {
+    .switch .checkbox:checked+.label .ball {
         left: calc(19% - 0px);
     }
 
