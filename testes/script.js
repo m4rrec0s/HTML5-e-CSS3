@@ -1,15 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const inputFields = document.querySelectorAll('#bloco_login input');
+    const inputFields = document.querySelectorAll('#bloco_login form input');
 
     inputFields.forEach(function (input) {
-        // Adiciona um ouvinte de evento para o evento de foco
         input.addEventListener('focus', function () {
             input.classList.add('active');
         });
 
-        // Adiciona um ouvinte de evento para o evento de desfoque
         input.addEventListener('blur', function () {
             input.classList.remove('active');
         });
     });
-});
+
+    function formSubmit(event) {
+        // Previne o comportamento padrão do formulário de recarregar a página
+        event.preventDefault();
+    
+        // Coleta os valores dos inputs
+        const email = document.getElementById('login').value;
+        const password = document.getElementById('password').value;
+    
+        // Mostra os valores no console
+        console.log(`Email: ${email}, Password: ${password}`);
+    }
+        
+    }
+);
